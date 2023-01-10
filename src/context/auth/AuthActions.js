@@ -1,54 +1,45 @@
 import {SET_USER} from "./AuthTypes"
 import request from "../../seyed-modules/request/request"
 import apiUrlsConstant from "../../constant/apiUrlsConstant"
-import cookieHelper from "../../seyed-modules/helpers/cookieHelper"
+import toastManager from "../../seyed-modules/helpers/toastManager"
+import {SUCCESS_TOAST} from "../../seyed-modules/constant/toastTypes"
+import errorManager from "../../helpers/errorManager"
+import getToken from "../../helpers/getToken"
 
-const base = process.env.REACT_APP_REST_URL
-
-function sendOtp({mobile, cancel})
+function login({email, password, dispatch})
 {
-    return request.post({base, url: apiUrlsConstant.sendOtp, data: {mobile}, cancel})
+    const data = new FormData()
+    data.append("identity", email)
+    data.append("credential", password)
+    return request.post({url: apiUrlsConstant.login, data})
+        .then(({result, data, error}) =>
+        {
+            if (result && data?.length === 1) setUser({user: data[0], dispatch})
+            else errorManager({error})
+        })
 }
 
-function loginOrSignup({mobile, code, dispatch})
+function register({email, password})
 {
-    return request.post({base, url: apiUrlsConstant.sendOtp, data: {mobile, code}})
-        .then(res =>
+    const data = new FormData()
+    data.append("email", email)
+    data.append("credential", password)
+    return request.post({url: apiUrlsConstant.register, data})
+        .then(({result, data, error}) =>
         {
-            const {insertInstant, lastUpdateInstant} = res.user
-            setUser({user: res, dispatch})
-            return ({isSignUp: insertInstant === lastUpdateInstant})
+            if (result && data?.[0]?.message) toastManager.addToast({type: SUCCESS_TOAST, message: data[0].message})
+            else errorManager({error})
         })
 }
 
 function getUser({dispatch})
 {
-    return request.get({base, url: apiUrlsConstant.getProfile, dontCache: true, dontToast: true})
-        .then(user =>
+    return request.post({url: apiUrlsConstant.getUser, dontToast: true, data: {token: getToken()}})
+        .then(({result, data, error}) =>
         {
-            setUser({user, dispatch})
+            if (result && data?.length === 1) setUser({user: data[0], dispatch})
+            else errorManager({error})
         })
-}
-
-function getTokenWithRefreshToken()
-{
-    return request.get({base, url: apiUrlsConstant.refreshToken, dontCache: true, dontToast: true, useRefreshToken: true})
-        .then(res =>
-        {
-            const {refreshToken, token} = res
-            cookieHelper.setItem("token", token)
-            cookieHelper.setItem("refreshToken", refreshToken)
-            return true
-        })
-        .catch(() =>
-        {
-            return false
-        })
-}
-
-function checkEmail({email, cancel})
-{
-    return request.get({base, url: apiUrlsConstant.checkEmail, param: `?email=${email}`, cancel})
 }
 
 function setUser({user, dispatch})
@@ -61,16 +52,14 @@ function setUser({user, dispatch})
 
 function logout()
 {
-    return request.post({base, url: apiUrlsConstant.logout, useRefreshToken: true})
+    return request.post({url: apiUrlsConstant.logout, data: {token: getToken()}})
 }
 
 const AuthActions = {
-    sendOtp,
-    loginOrSignup,
+    login,
+    register,
     getUser,
-    checkEmail,
     setUser,
-    getTokenWithRefreshToken,
     logout,
 }
 

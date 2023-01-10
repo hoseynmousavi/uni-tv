@@ -7,10 +7,11 @@ import ThemeProvider from "./seyed-modules/context/theme/ThemeReducer"
 import AuthProvider from "./context/auth/AuthReducer"
 import changeColorVariablesConstant from "./constant/changeColorVariablesConstant"
 import request from "./seyed-modules/request/request"
-import AuthActions from "./context/auth/AuthActions"
 import offlineSending from "./constant/offlineSending"
 import changeFontVariablesConstant from "./constant/changeFontVariablesConstant"
 import LanguageProvider from "./seyed-modules/context/language/LanguageReducer"
+import CategoryProvider from "./context/category/CategoryReducer"
+import VideoProvider from "./context/video/VideoReducer"
 
 const root = createRoot(document.getElementById("root"))
 
@@ -20,16 +21,18 @@ root.render(
     <LanguageProvider changeVariables={changeFontVariablesConstant}>
         <ThemeProvider changeVariables={changeColorVariablesConstant}>
             <AuthProvider>
-                <WrappedApp/>
+                <CategoryProvider>
+                    <VideoProvider>
+                        <WrappedApp/>
+                    </VideoProvider>
+                </CategoryProvider>
             </AuthProvider>
         </ThemeProvider>
     </LanguageProvider>,
 )
 
 request.init({
-    refreshFunc: AuthActions.getTokenWithRefreshToken,
     offlineSendingArr: offlineSending,
-    // makeBaseOnEnvFunc
 })
 
 registerSW()

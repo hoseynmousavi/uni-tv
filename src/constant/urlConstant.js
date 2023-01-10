@@ -1,5 +1,6 @@
 const urlConstant = {
     home: "/",
+
     login: "/login",
 }
 

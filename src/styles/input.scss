@@ -10,31 +10,13 @@
 
 .input-label-text {
   font-size: var(--title-font);
-  font-family: my-font-bold, serif;
-}
-
-.input-label-err {
-  color: var(--toast-fail-text);
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  transition: height var(--first-transition), opacity var(--first-transition);
-
-  &.no-space {
-    position: absolute;
-  }
-
-  &.show {
-    opacity: 1;
-    height: 35px;
-  }
+  font-family: "my-font-demibold", serif;
 }
 
 .input-main {
+  background-color: var(--first-background-color);
   font-size: var(--title-font);
-  font-family: my-font-bold, serif;
+  font-family: "my-font-demibold", serif;
   margin-top: 10px;
   height: var(--btn-input-height);
   width: 100%;
@@ -43,20 +25,26 @@
   border-radius: var(--first-radius);
   transition: border ease 0.2s;
 
+  &.area {
+    padding: 12px;
+    height: auto;
+    resize: none;
+  }
+
   &.have-icon {
-    padding: 0 12px 0 48px;
+    padding-inline-end: 48px;
   }
 
   &.ltr {
     direction: ltr;
 
     &.have-icon {
-      padding: 0 48px 0 12px;
+      padding-inline-end: 48px;
     }
   }
 
   &:disabled {
-    background-color: var(--second-background-color);
+    background-color: var(--disable-bg-color);
   }
 
   &:focus {
@@ -64,16 +52,16 @@
   }
 
   &.err {
-    border: 2px solid var(--toast-fail-text);
+    border: 2px solid var(--danger-color);
   }
 
   &::placeholder {
-    font-family: my-font, serif;
+    font-family: "my-font", serif;
     color: var(--second-text-color);
   }
 
   &:placeholder-shown {
-    direction: rtl;
+    direction: var(--language-direction);
   }
 
   &.ltr-placeholder {
@@ -92,8 +80,8 @@
   pointer-events: none;
 
   &.rtl {
-    right: initial;
-    left: 12px;
+    inset-inline-start: initial;
+    inset-inline-end: 12px;
   }
 
   &.icon {

@@ -1,0 +1,50 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--page-color);
+  padding: 0 var(--mobile-second-solid-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--header-z-index);
+  transition: box-shadow ease 0.2s;
+
+  &.is-stick {
+    box-shadow: var(--first-shadow);
+  }
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--second-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-icon {
+  width: 50%;
+  height: 50%;
+}
+
+.header-title {
+  margin-inline-start: 8px;
+  font-size: var(--large-font);
+  font-family: "my-font-demibold", serif;
+}
+
+.header-btn {
+  height: 36px;
+  font-size: var(--title-font);
+  font-family: "my-font", serif;
+}

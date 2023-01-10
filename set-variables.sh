@@ -36,7 +36,6 @@ sed -i "s~DISABLE_BG_COLOR~$REACT_APP_DISABLE_BG_COLOR~g" build/index.html
 sed -i "s~DISABLE_TEXT_COLOR~$REACT_APP_DISABLE_TEXT_COLOR~g" build/index.html
 sed -i "s~TRANSITION_METHOD~$REACT_APP_TRANSITION_METHOD~g" build/index.html
 sed -i "s~FIRST_TRANSITION~$REACT_APP_FIRST_TRANSITION~g" build/index.html
-sed -i "s~LINK_COLOR~$REACT_APP_LINK_COLOR~g" build/index.html
 sed -i "s~DANGER_COLOR~$REACT_APP_DANGER_COLOR~g" build/index.html
 sed -i "s~FIRST_ICON_COLOR~$REACT_APP_FIRST_ICON_COLOR~g" build/index.html
 sed -i "s~SECOND_ICON_COLOR~$REACT_APP_SECOND_ICON_COLOR~g" build/index.html
