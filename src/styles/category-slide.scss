@@ -16,6 +16,9 @@
   color: var(--first-color);
   display: flex;
   align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--first-radius);
+  margin-inline-end: -8px;
 }
 
 .category-slide-header-btn-icon {
