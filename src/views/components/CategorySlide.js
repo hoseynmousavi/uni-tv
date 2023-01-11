@@ -42,7 +42,7 @@ function CategorySlide({data: {title, id}})
                             <VideoRowItem key={item.id} data={item}/>,
                         )
                         :
-                        isLoading ?
+                        isLoading || !category ?
                             new Array(5).fill(0).map((_, index) =>
                                 <VideoRowItemSkeleton key={index}/>,
                             )

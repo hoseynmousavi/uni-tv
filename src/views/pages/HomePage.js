@@ -12,7 +12,7 @@ function HomePage()
             <div className="home">
                 {
                     isLoading ?
-                        <div style={{margin: "calc((var(--full-height) - var(--header-height) - var(--nav-height) - 20px) / 2) 0"}}>
+                        <div style={{marginTop: "calc((var(--full-height) - var(--header-height) - var(--nav-height) - 40px) / 2)"}}>
                             <MyLoader/>
                         </div>
                         :

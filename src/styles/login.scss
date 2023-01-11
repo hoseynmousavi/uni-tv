@@ -69,6 +69,10 @@
   width: 100%;
 }
 
+.login-bottom-btn {
+  border-radius: var(--first-radius) !important;
+}
+
 .login-privacy {
   font-size: var(--regular-font);
   color: var(--second-text-color);

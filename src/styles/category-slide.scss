@@ -52,10 +52,10 @@
   height: auto;
   border-radius: var(--first-radius);
   object-fit: cover;
+  aspect-ratio: 220 / 148;
 
   img {
     display: block;
-    aspect-ratio: 220 / 148;
   }
 }
 
@@ -75,7 +75,7 @@
   width: 220px;
   aspect-ratio: 220 / 148;
   margin-bottom: 28px;
-  background-color: var(--second-background-color);
+  background-color: var(--disable-bg-color);
   border-radius: var(--first-radius);
   display: inline-flex;
   align-items: center;

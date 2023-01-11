@@ -156,7 +156,7 @@ function LoginContainer()
                     {textConstant.privacyEnd}
                 </div>
                 <BtnBottomFullScreen>
-                    <Button loading={isLoading} disable={submitDisable} type="first" onClick={submit}>
+                    <Button className="login-bottom-btn" loading={isLoading} disable={submitDisable} type="first" onClick={submit}>
                         {textConstant[isRegister ? "register" : "login"]}
                     </Button>
                 </BtnBottomFullScreen>
