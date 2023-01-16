@@ -81,7 +81,8 @@ function LoginContainer()
                 <LogoSvg className="login-content-logo"/>
                 <h1 className="login-content-title">{textConstant[isRegister ? "registerTitle" : "loginTitle"]}</h1>
                 <p className="login-content-desc">{textConstant[isRegister ? "registerDesc" : "loginDesc"]}</p>
-                <Input type="email"
+                <Input className="login-content-email"
+                       type="email"
                        validation="email"
                        label={textConstant.email}
                        placeholder={textConstant.emailPlaceholder}
