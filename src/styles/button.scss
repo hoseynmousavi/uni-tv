@@ -1,4 +1,9 @@
 .button {
   padding: 0 16px;
   border-radius: var(--third-radius);
+
+  &.second {
+    background-color: var(--third-color);
+    color: var(--solid-light);
+  }
 }

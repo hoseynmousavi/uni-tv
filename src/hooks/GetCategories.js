@@ -3,11 +3,11 @@ import GetData from "../seyed-modules/request/GetData"
 import CategoryActions from "../context/category/CategoryActions"
 import {CategoryContext} from "../context/category/CategoryReducer"
 
-function GetCategories()
+function GetCategories({id} = {})
 {
     const {state: {list: {results, keys, getDone}}, dispatch} = useContext(CategoryContext)
     const isLoading = !getDone
-    const data = keys.reduce((sum, item) => [...sum, results[item]], [])
+    const data = id ? results[id] : keys.reduce((sum, item) => [...sum, results[item]], [])
     const cancelToken = useRef(null)
 
     GetData({request, isLoading, cancelToken})

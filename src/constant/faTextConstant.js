@@ -21,9 +21,20 @@ const faTextConstant = {
     sendVideo: "ارسال ویدئو",
     home: "خانه",
     archive: "آرشیو",
-    profile: "پروفایل",
+    account: "پروفایل",
     showAll: "مشاهده همه",
     notFound: "موردی یافت نشد",
+    editAccount: "ویرایش پروفایل",
+    setting: "تنظیمات",
+    display: "نمایش",
+    chooseLanguage: "انتخاب زبان",
+    aboutUs: "درباره ما",
+    logout: "خروج",
+    tools: "جعبه ابزار دانشجویی",
+    portal: "پرتال دانشجویی",
+    food: "سامانه تغذیه",
+    other: "سایر خدمات",
+    views: " بازدید",
 }
 
 export default faTextConstant

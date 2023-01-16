@@ -5,8 +5,30 @@
 @import "input";
 @import "btn-bottom";
 @import "login";
-@import "header";
+@import "category-slide";
+@import "category-header";
+@import "category-video-cart";
+@import "home-header";
 @import "navbar";
 @import "home";
 @import "button";
-@import "category-slide";
+@import "account";
+@import "category";
+
+@font-face {
+  font-family: "my-font";
+  src: url("../media/fonts/yekan-fanum-regular.woff") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "my-font-demibold";
+  src: url("../media/fonts/yekan-fanum-demibold.woff") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "my-font-bold";
+  src: url("../media/fonts/yekan-fanum-bold.woff") format("woff2");
+  font-display: swap;
+}

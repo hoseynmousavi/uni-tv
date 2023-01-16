@@ -1,0 +1,138 @@
+.account {
+  background-color: var(--page-color);
+  padding: 40px 0 calc(var(--nav-height) + 32px);
+  min-height: var(--full-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.account-detail-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-detail-name {
+  font-size: var(--title-font);
+  font-family: "my-font-demibold", serif;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.account-detail-email {
+  color: var(--second-text-color);
+  font-size: var(--small-font);
+}
+
+.account-detail-edit {
+  padding: 8px 16px;
+  border-radius: var(--first-radius);
+  cursor: pointer;
+  color: var(--link-color);
+  margin-top: 8px;
+  font-family: "my-font-demibold", serif;
+  font-size: var(--small-font);
+}
+
+.account-setting {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.account-setting-title {
+  font-size: var(--title-font);
+  font-family: "my-font-demibold", serif;
+  padding: 0 var(--mobile-second-solid-padding);
+  margin-bottom: 4px;
+}
+
+.account-setting-item-link {
+  width: 100%;
+}
+
+.account-setting-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px var(--mobile-second-solid-padding);
+}
+
+.account-setting-item-content {
+  display: flex;
+  align-items: center;
+  font-size: var(--title-font);
+}
+
+.account-setting-item-content-icon {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--third-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 8px;
+
+  &.logout {
+    background-color: var(--first-color);
+  }
+}
+
+.account-setting-item-content-icon-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.account-setting-item-arrow {
+  width: 12px;
+  height: 12px;
+  transform: rotate(180deg);
+}
+
+.account-tools {
+  width: 100%;
+}
+
+.account-tools-carts {
+  display: flex;
+  gap: 12px;
+  padding: 0 var(--mobile-second-solid-padding);
+}
+
+.account-tools-cart-item {
+  flex-grow: 1;
+  width: 30%;
+}
+
+.account-tools-cart-item-img {
+  width: 100%;
+  aspect-ratio: 110 / 80;
+  padding: 4px;
+  border: 1px solid var(--second-border-color);
+  border-radius: var(--second-radius);
+
+  img {
+    border: none;
+    padding: 0;
+    object-fit: contain;
+  }
+}
+
+.account-tools-cart-item-title {
+  text-align: center;
+  width: 100%;
+  font-size: var(--title-font);
+  margin-top: 8px;
+}

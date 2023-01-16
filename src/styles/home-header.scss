@@ -1,4 +1,4 @@
-.header {
+.home-header {
   height: var(--header-height);
   background-color: var(--page-color);
   padding: 0 var(--mobile-second-solid-padding);
@@ -17,33 +17,33 @@
   }
 }
 
-.header-section {
+.home-header-section {
   display: flex;
   align-items: center;
 }
 
-.header-logo {
+.home-header-logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--second-background-color);
+  background-color: var(--third-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-logo-icon {
+.home-header-logo-icon {
   width: 50%;
   height: 50%;
 }
 
-.header-title {
+.home-header-title {
   margin-inline-start: 8px;
   font-size: var(--large-font);
-  font-family: "my-font-demibold", serif;
+  font-family: "my-font-bold", serif;
 }
 
-.header-btn {
+.home-header-btn {
   width: auto;
   height: 36px;
   font-size: var(--title-font);

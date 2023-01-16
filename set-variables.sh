@@ -32,6 +32,8 @@ sed -i "s~TOAST_FAIL_BG~$REACT_APP_TOAST_FAIL_BG~g" build/index.html
 sed -i "s~TOAST_FAIL_TEXT~$REACT_APP_TOAST_FAIL_TEXT~g" build/index.html
 sed -i "s~FIRST_COLOR~$REACT_APP_FIRST_COLOR~g" build/index.html
 sed -i "s~SECOND_COLOR~$REACT_APP_SECOND_COLOR~g" build/index.html
+sed -i "s~THIRD_COLOR~$REACT_APP_THIRD_COLOR~g" build/index.html
+sed -i "s~LINK_COLOR~$REACT_APP_LINK_COLOR~g" build/index.html
 sed -i "s~DISABLE_BG_COLOR~$REACT_APP_DISABLE_BG_COLOR~g" build/index.html
 sed -i "s~DISABLE_TEXT_COLOR~$REACT_APP_DISABLE_TEXT_COLOR~g" build/index.html
 sed -i "s~TRANSITION_METHOD~$REACT_APP_TRANSITION_METHOD~g" build/index.html
@@ -41,6 +43,7 @@ sed -i "s~FIRST_ICON_COLOR~$REACT_APP_FIRST_ICON_COLOR~g" build/index.html
 sed -i "s~SECOND_ICON_COLOR~$REACT_APP_SECOND_ICON_COLOR~g" build/index.html
 sed -i "s~FIRST_BACKGROUND_COLOR~$REACT_APP_FIRST_BACKGROUND_COLOR~g" build/index.html
 sed -i "s~SECOND_BACKGROUND_COLOR~$REACT_APP_SECOND_BACKGROUND_COLOR~g" build/index.html
+sed -i "s~THIRD_BACKGROUND_COLOR~$REACT_APP_THIRD_BACKGROUND_COLOR~g" build/index.html
 sed -i "s~PAGE_COLOR~$REACT_APP_PAGE_COLOR~g" build/index.html
 sed -i "s~BOX_COLOR~$REACT_APP_BOX_COLOR~g" build/index.html
 sed -i "s~FIRST_MODAL_BACKGROUND_COLOR~$REACT_APP_FIRST_MODAL_BACKGROUND_COLOR~g" build/index.html
@@ -51,6 +54,7 @@ sed -i "s~FIRST_TEXT_COLOR~$REACT_APP_FIRST_TEXT_COLOR~g" build/index.html
 sed -i "s~SECOND_TEXT_COLOR~$REACT_APP_SECOND_TEXT_COLOR~g" build/index.html
 sed -i "s~THIRD_TEXT_COLOR~$REACT_APP_THIRD_TEXT_COLOR~g" build/index.html
 sed -i "s~FIRST_BORDER_COLOR~$REACT_APP_FIRST_BORDER_COLOR~g" build/index.html
+sed -i "s~SECOND_BORDER_COLOR~$REACT_APP_SECOND_BORDER_COLOR~g" build/index.html
 sed -i "s~FIRST_SHADOW~$REACT_APP_FIRST_SHADOW~g" build/index.html
 sed -i "s~SECOND_SHADOW~$REACT_APP_SECOND_SHADOW~g" build/index.html
 sed -i "s~THIRD_SHADOW~$REACT_APP_THIRD_SHADOW~g" build/index.html

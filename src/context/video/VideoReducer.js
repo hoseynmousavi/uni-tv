@@ -15,15 +15,18 @@ function VideoProvider({children})
         {
             case GET_VIDEO_LIST:
             {
-                const {data: {videos, paginator}, category} = action.payload
+                const {data: {videos, paginator: {count, limit, page}}, category} = action.payload
                 return {
                     ...state,
                     results: {...state.results, ...videos.reduce((sum, item) => ({...sum, [item.id]: item}), {})},
                     [category]: {
                         ...state[category],
                         keys: [...new Set([...(state[category]?.keys ?? []), ...videos.map(item => item.id)])],
-                        paginator,
-                        getDone: true,
+                        paginator: {
+                            count: Math.ceil(count / limit),
+                            limit,
+                            page,
+                        },
                     },
                 }
             }

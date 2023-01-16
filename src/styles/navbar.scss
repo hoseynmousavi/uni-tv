@@ -10,6 +10,11 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--page-color);
+  transition: transform ease 0.3s;
+
+  &.hide {
+    transform: translate3d(0, 100%, 0);
+  }
 }
 
 .navbar-item {
@@ -20,18 +25,17 @@
 
   &.active {
     .navbar-item-icon {
-      background-color: var(--second-background-color);
+      background-color: var(--third-background-color);
     }
 
     .navbar-item-icon-svg {
       path {
-        fill: var(--first-color);
+        fill: var(--third-color);
       }
     }
 
     .navbar-item-title {
-      font-family: "my-font-demibold", serif;
-      color: var(--first-color);
+      color: var(--third-color);
     }
   }
 }
@@ -44,14 +48,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color ease 0.3s;
 }
 
 .navbar-item-icon-svg {
   width: 20px;
   height: 20px;
+
+  path {
+    transition: fill ease 0.3s;
+  }
 }
 
 .navbar-item-title {
   margin: 4px 0;
   font-size: var(--small-font);
+  transition: color ease 0.3s;
 }

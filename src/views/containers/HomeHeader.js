@@ -4,7 +4,7 @@ import Button from "../../seyed-modules/components/Button"
 import ScrollY from "../../seyed-modules/hooks/ScrollY"
 import {useState} from "react"
 
-function Header()
+function HomeHeader()
 {
     const [isStick, setIsStick] = useState(false)
     const {textConstant} = GetTextConstant()
@@ -16,16 +16,16 @@ function Header()
     }
 
     return (
-        <header className={`header ${isStick ? "is-stick" : ""}`}>
-            <div className="header-section">
-                <div className="header-logo">
-                    <LogoSvg className="header-logo-icon"/>
+        <header className={`home-header ${isStick ? "is-stick" : ""}`}>
+            <div className="home-header-section">
+                <div className="home-header-logo">
+                    <LogoSvg className="home-header-logo-icon"/>
                 </div>
-                <h1 className="header-title">{process.env.REACT_APP_NAME}</h1>
+                <h1 className="home-header-title">{process.env.REACT_APP_NAME}</h1>
             </div>
-            <Button className="header-btn">{textConstant.sendVideo}</Button>
+            <Button type="second" className="home-header-btn">{textConstant.sendVideo}</Button>
         </header>
     )
 }
 
-export default Header
+export default HomeHeader

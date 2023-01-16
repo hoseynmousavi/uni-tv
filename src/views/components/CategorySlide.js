@@ -6,6 +6,9 @@ import VideoRowItem from "./VideoRowItem"
 import VideoRowItemSkeleton from "./VideoRowItemSkeleton"
 import {useEffect, useRef, useState} from "react"
 import firstView from "../../seyed-modules/helpers/firstView"
+import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
+import Link from "../../seyed-modules/components/Link"
+import urlConstant from "../../constant/urlConstant"
 
 function CategorySlide({data: {title, id}})
 {
@@ -13,6 +16,7 @@ function CategorySlide({data: {title, id}})
     const {textConstant} = GetTextConstant()
     const {data, isLoading} = GetVideoList({category})
     const contRef = useRef(null)
+    const showSlide = !category || isLoading || data.length > 0
 
     useEffect(() =>
     {
@@ -24,15 +28,17 @@ function CategorySlide({data: {title, id}})
     }, [])
 
     return (
-        <>
+        <div className={`category-slide ${showSlide ? "" : "hide"}`}>
             <div className="category-slide-header" ref={contRef}>
                 <div className="category-slide-header-title">{title}</div>
                 {
                     (data?.length > 0 || isLoading) &&
-                    <Material className="category-slide-header-btn">
-                        {textConstant.showAll}
-                        <ArrowSvg className="category-slide-header-btn-icon"/>
-                    </Material>
+                    <Link to={urlConstant.category(id)}>
+                        <Material className="category-slide-header-btn" backgroundColor={createMaterialColor({variable: "--first-color"})}>
+                            {textConstant.showAll}
+                            <ArrowSvg className="category-slide-header-btn-icon"/>
+                        </Material>
+                    </Link>
                 }
             </div>
             <div className="category-slide-content hide-scroll">
@@ -52,7 +58,7 @@ function CategorySlide({data: {title, id}})
                             </div>
                 }
             </div>
-        </>
+        </div>
     )
 }
 

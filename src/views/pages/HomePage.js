@@ -1,6 +1,6 @@
 import GetCategories from "../../hooks/GetCategories"
 import CategorySlide from "../components/CategorySlide"
-import Header from "../containers/Header"
+import HomeHeader from "../containers/HomeHeader"
 import MyLoader from "../../seyed-modules/components/MyLoader"
 
 function HomePage()
@@ -8,7 +8,7 @@ function HomePage()
     const {isLoading, data} = GetCategories()
     return (
         <>
-            <Header/>
+            <HomeHeader/>
             <div className="home">
                 {
                     isLoading ?

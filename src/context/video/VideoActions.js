@@ -4,7 +4,7 @@ import getToken from "../../helpers/getToken"
 import errorManager from "../../helpers/errorManager"
 import {GET_VIDEO_LIST} from "./VideoTypes"
 
-function getList({page = 1, limit = 12, category, cancel, dispatch})
+function getList({page = 1, limit = 8, category, cancel, dispatch})
 {
     return request.post({url: apiUrlsConstant.getVideos, cancel, data: {token: getToken(), page, limit, category}})
         .then(({result, data, error}) =>
