@@ -2,6 +2,8 @@
 rm build/*.js.map
 rm build/static/js/*.map
 rm build/static/css/*.map
+gzip -r build/static/js
+gzip -r build/static/css
 source .env
 source .env.local
 sed -i "" "s~NAME~$REACT_APP_NAME~g" build/index.html
