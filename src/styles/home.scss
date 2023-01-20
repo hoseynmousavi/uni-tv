@@ -3,3 +3,7 @@
   padding: calc(var(--header-height) + 16px) 0 var(--nav-height);
   background-color: var(--page-color);
 }
+
+.loading-cont {
+  margin-top: calc((var(--full-height) - var(--header-height) - var(--nav-height) - 32px) / 2);
+}

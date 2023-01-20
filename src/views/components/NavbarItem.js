@@ -6,7 +6,7 @@ function NavbarItem({title, Icon, location, link})
 {
     const active = link === location
     return (
-        <Link to={link}>
+        <Link to={link} replace>
             <Material className={`navbar-item ${active ? "active" : ""}`} backgroundColor={createMaterialColor({variable: "--third-color", alpha: "0.1"})}>
                 <div className="navbar-item-icon">
                     <Icon className="navbar-item-icon-svg"/>

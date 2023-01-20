@@ -14,6 +14,9 @@ import AccountToolsItem from "../components/AccountToolsItem"
 import portal from "../../media/images/portal.png"
 import food from "../../media/images/food.png"
 import other from "../../media/images/other.png"
+import login from "../../media/images/login.png"
+import Button from "../../seyed-modules/components/Button"
+import urlConstant from "../../constant/urlConstant"
 
 function AccountPage()
 {
@@ -23,14 +26,26 @@ function AccountPage()
     return (
         <div className="account">
             <div className="account-detail">
-                <ImageShow className="account-detail-avatar" src={avatar}/>
-                <div className="account-detail-name">{name}</div>
-                <div className="account-detail-email">{email}</div>
-                <Link>
-                    <Material className="account-detail-edit" backgroundColor={createMaterialColor({variable: "--link-color"})}>
-                        {textConstant.editAccount}
-                    </Material>
-                </Link>
+                {
+                    user ?
+                        <>
+                            <ImageShow className="account-detail-avatar" src={avatar}/>
+                            <div className="account-detail-name">{name}</div>
+                            <div className="account-detail-email">{email}</div>
+                            <Link>
+                                <Material className="account-detail-edit" backgroundColor={createMaterialColor({variable: "--link-color"})}>
+                                    {textConstant.editAccount}
+                                </Material>
+                            </Link>
+                        </>
+                        :
+                        <>
+                            <ImageShow className="account-detail-login-img" src={login}/>
+                            <Link className="account-detail-login-btn" to={urlConstant.login}>
+                                <Button className="account-detail-login-btn-inner" type="second">{textConstant.loginRegister}</Button>
+                            </Link>
+                        </>
+                }
             </div>
             <div className="account-setting">
                 <div className="account-setting-title">{textConstant.setting}</div>

@@ -1,5 +1,5 @@
 import {createContext, useReducer} from "react"
-import {GET_VIDEO_LIST} from "./VideoTypes"
+import {GET_VIDEO_ITEM, GET_VIDEO_LIST} from "./VideoTypes"
 
 export const VideoContext = createContext(null)
 
@@ -18,7 +18,10 @@ function VideoProvider({children})
                 const {data: {videos, paginator: {count, limit, page}}, category} = action.payload
                 return {
                     ...state,
-                    results: {...state.results, ...videos.reduce((sum, item) => ({...sum, [item.id]: item}), {})},
+                    results: {
+                        ...state.results,
+                        ...videos.reduce((sum, item) => ({...sum, [item.id]: {...(state.results?.[item.id] ?? {}), ...item}}), {}),
+                    },
                     [category]: {
                         ...state[category],
                         keys: [...new Set([...(state[category]?.keys ?? []), ...videos.map(item => item.id)])],
@@ -26,6 +29,20 @@ function VideoProvider({children})
                             count: Math.ceil(count / limit),
                             limit,
                             page,
+                        },
+                    },
+                }
+            }
+            case GET_VIDEO_ITEM:
+            {
+                const {data} = action.payload
+                return {
+                    ...state,
+                    results: {
+                        ...state.results,
+                        [data.id]: {
+                            ...(state?.results?.[data.id] ?? {}),
+                            ...data,
                         },
                     },
                 }

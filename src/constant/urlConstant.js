@@ -6,6 +6,8 @@ const urlConstant = {
     archive: "/archive",
     account: "/account",
 
+    video: videoId => `/video/${videoId}`,
+
     category: id => `/category/${id}`,
 }
 

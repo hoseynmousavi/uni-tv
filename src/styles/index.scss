@@ -13,7 +13,9 @@
 @import "home";
 @import "button";
 @import "account";
+@import "archive";
 @import "category";
+@import "video";
 
 @font-face {
   font-family: "my-font";
@@ -37,4 +39,8 @@
   font-family: "my-font-en";
   src: url("../media/fonts/yekan-regular.woff2") format("woff2");
   font-display: swap;
+}
+
+.main-tab {
+  position: static;
 }

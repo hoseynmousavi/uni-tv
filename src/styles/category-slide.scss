@@ -58,10 +58,12 @@
 }
 
 .video-row-item {
+  border-radius: var(--first-radius);
   display: inline-block;
   vertical-align: top;
   min-width: 220px;
   width: 220px;
+  cursor: pointer;
 }
 
 .video-row-item-img {

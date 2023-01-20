@@ -8,7 +8,7 @@ import CategoryVideoCartSkeleton from "../components/CategoryVideoCartSkeleton"
 
 function CategoryPage({route: {match: {params: {id}}}})
 {
-    const {data, isLoading} = GetCategories({id})
+    const {data/*, isLoading*/} = GetCategories({id})
     const {data: videos, isLoading: videosLoading, getMore} = GetVideoList({category: id})
     const {textConstant} = GetTextConstant()
 

@@ -15,7 +15,7 @@ import {AuthContext} from "../../context/auth/AuthReducer"
 import parseQueryString from "../../seyed-modules/helpers/parseQueryString"
 import urlConstant from "../../constant/urlConstant"
 
-function LoginContainer()
+function LoginPage()
 {
     const {dispatch} = useContext(AuthContext)
     const {textConstant, toastConstant} = GetTextConstant()
@@ -166,4 +166,4 @@ function LoginContainer()
     )
 }
 
-export default LoginContainer
+export default LoginPage

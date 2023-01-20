@@ -15,6 +15,26 @@
   width: 100%;
 }
 
+.account-detail-login-img {
+  margin: 0 auto;
+  width: 80%;
+
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.account-detail-login-btn {
+  width: 100%;
+}
+
+.account-detail-login-btn-inner {
+  border-radius: var(--first-radius);
+  width: calc(100% - (2 * var(--mobile-second-solid-padding)));
+  margin: 0 var(--mobile-second-solid-padding);
+}
+
 .account-detail-avatar {
   width: 64px;
   height: 64px;
@@ -83,7 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-inline-end: 8px;
+  margin-inline-end: 12px;
 
   &.logout {
     background-color: var(--first-color);
@@ -114,16 +134,17 @@
 .account-tools-cart-item {
   flex-grow: 1;
   width: 30%;
+  border-radius: var(--second-radius);
 }
 
 .account-tools-cart-item-img {
   width: 100%;
-  aspect-ratio: 110 / 80;
   padding: 4px;
   border: 1px solid var(--second-border-color);
   border-radius: var(--second-radius);
 
   img {
+    aspect-ratio: 110 / 80;
     border: none;
     padding: 0;
     object-fit: contain;

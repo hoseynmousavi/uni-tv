@@ -2,7 +2,7 @@ import request from "../../seyed-modules/request/request"
 import apiUrlsConstant from "../../constant/apiUrlsConstant"
 import getToken from "../../helpers/getToken"
 import errorManager from "../../helpers/errorManager"
-import {GET_VIDEO_LIST} from "./VideoTypes"
+import {GET_VIDEO_ITEM, GET_VIDEO_LIST} from "./VideoTypes"
 
 function getList({page = 1, limit = 8, category, cancel, dispatch})
 {
@@ -14,8 +14,19 @@ function getList({page = 1, limit = 8, category, cancel, dispatch})
         })
 }
 
+function getItem({id, cancel, dispatch})
+{
+    return request.post({url: apiUrlsConstant.getVideo, cancel, data: {token: getToken(), id}})
+        .then(({result, data, error}) =>
+        {
+            if (result) dispatch({type: GET_VIDEO_ITEM, payload: {data}})
+            else errorManager({error})
+        })
+}
+
 const VideoActions = {
     getList,
+    getItem,
 }
 
 export default VideoActions

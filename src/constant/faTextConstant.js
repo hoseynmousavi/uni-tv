@@ -35,6 +35,10 @@ const faTextConstant = {
     food: "سامانه تغذیه",
     other: "سایر خدمات",
     views: " بازدید",
+    searchHolder: "عبارت مورد نظر را برای جستجو وارد کنید",
+    categories: count => `دسته‌بندی‌ها ${count ? `(${count})` : ""}`,
+    similarVideos: "ویدئوهای مشابه",
+    loginRegister: "ثبت‌نام / ورود",
 }
 
 export default faTextConstant
