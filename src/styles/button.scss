@@ -6,4 +6,10 @@
     background-color: var(--third-color);
     color: var(--solid-light);
   }
+
+  &.disable {
+    background-color: var(--disable-bg-color);
+    color: var(--disable-text-color);
+    cursor: not-allowed;
+  }
 }

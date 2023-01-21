@@ -30,7 +30,7 @@ function HomeHeader()
                 </div>
                 <h1 className="home-header-title">{process.env.REACT_APP_NAME}</h1>
             </div>
-            <Button type="second" className="home-header-btn" disable onDisableClick={onDisableClick}>{textConstant.sendVideo}</Button>
+            <Button type="second" className="home-header-btn" onClick={onDisableClick}>{textConstant.sendVideo}</Button>
         </header>
     )
 }
