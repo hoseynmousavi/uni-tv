@@ -13,7 +13,7 @@ function VideoPage({route: {match: {params: {videoId}}}})
     const [showPage, setShowPage] = useState(false)
     const {data} = GetVideoItem({id: videoId, doAfterGet})
     const {title, hits, time_create, text_summary, text_description, category_main} = data || {}
-    const description = text_summary || text_description
+    const description = text_description || text_summary
     const contRef = useRef(null)
     const {textConstant} = GetTextConstant()
     const {data: videos, isLoading: videosLoading, getMore} = GetVideoList({category: category_main})

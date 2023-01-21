@@ -20,7 +20,7 @@ function VideoProvider({children})
                     ...state,
                     results: {
                         ...state.results,
-                        ...videos.reduce((sum, item) => ({...sum, [item.id]: {...(state.results?.[item.id] ?? {}), ...item}}), {}),
+                        ...videos.reduce((sum, item) => ({...sum, [item.id]: {...item, ...(state.results?.[item.id] ?? {})}}), {}),
                     },
                     [category]: {
                         ...state[category],
