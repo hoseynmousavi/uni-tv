@@ -21,7 +21,7 @@ function App()
     return (
         <div id="index-temp" className="index-temp">
             <Switch desktopAnimation isTab tabClassName="main-tab">
-                <Route path={urlConstant.video(":videoId")} render={route => <VideoPage route={route}/>}/>
+                <Route path={urlConstant.video(":videoId")} render={route => <VideoPage key={route?.match?.params?.videoId} route={route}/>}/>
                 <Route path={urlConstant.archive} render={() => <ArchivePage/>}/>
                 <Route path={urlConstant.account} render={() => <AccountPage/>}/>
                 <Route path={urlConstant.category(":id")} render={route => <CategoryPage route={route}/>}/>
