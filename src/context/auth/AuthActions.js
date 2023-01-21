@@ -5,13 +5,14 @@ import toastManager from "../../seyed-modules/helpers/toastManager"
 import {SUCCESS_TOAST} from "../../seyed-modules/constant/toastTypes"
 import errorManager from "../../helpers/errorManager"
 import getToken from "../../helpers/getToken"
+import getHeader from "../../helpers/getHeader"
 
 function login({email, password, dispatch})
 {
     const data = new FormData()
     data.append("identity", email)
     data.append("credential", password)
-    return request.post({url: apiUrlsConstant.login, data})
+    return request.post({url: apiUrlsConstant.login, data, headers: getHeader()})
         .then(({result, data, error}) =>
         {
             if (result && data?.length === 1) setUser({user: data[0], dispatch})
@@ -24,7 +25,7 @@ function register({email, password})
     const data = new FormData()
     data.append("email", email)
     data.append("credential", password)
-    return request.post({url: apiUrlsConstant.register, data})
+    return request.post({url: apiUrlsConstant.register, data, headers: getHeader()})
         .then(({result, data, error}) =>
         {
             if (result && data?.[0]?.message) toastManager.addToast({type: SUCCESS_TOAST, message: data[0].message})
@@ -34,7 +35,7 @@ function register({email, password})
 
 function getUser({dispatch})
 {
-    return request.post({url: apiUrlsConstant.getUser, dontToast: true, data: {token: getToken()}})
+    return request.post({url: apiUrlsConstant.getUser, dontToast: true, data: {token: getToken()}, headers: getHeader()})
         .then(({result, data, error}) =>
         {
             if (result && data?.length === 1) setUser({user: data[0], dispatch})
@@ -52,7 +53,7 @@ function setUser({user, dispatch})
 
 function logout()
 {
-    return request.post({url: apiUrlsConstant.logout, data: {token: getToken()}})
+    return request.post({url: apiUrlsConstant.logout, data: {token: getToken()}, headers: getHeader()})
 }
 
 const AuthActions = {
