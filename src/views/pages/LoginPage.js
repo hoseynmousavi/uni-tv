@@ -157,7 +157,7 @@ function LoginPage()
                     {textConstant.privacyEnd}
                 </div>
                 <BtnBottomFullScreen>
-                    <Button className="login-bottom-btn" loading={isLoading} disable={submitDisable} type="first" onClick={submit}>
+                    <Button className="login-bottom-btn" loading={isLoading} disable={submitDisable} type="second" onClick={submit}>
                         {textConstant[isRegister ? "register" : "login"]}
                     </Button>
                 </BtnBottomFullScreen>

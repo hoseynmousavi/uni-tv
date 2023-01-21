@@ -5,11 +5,11 @@
   right: 0;
   left: 0;
   height: var(--nav-height);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--first-shadow);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--page-color);
+  background-color: var(--first-background-color);
   transition: transform ease 0.3s;
 
   &.hide {

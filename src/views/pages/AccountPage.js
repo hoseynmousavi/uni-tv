@@ -6,10 +6,7 @@ import Link from "../../seyed-modules/components/Link"
 import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
 import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
 import AccountSettingItem from "../components/AccountSettingItem"
-import DisplaySvg from "../../media/svg/DisplaySvg"
-import LanguageSvg from "../../media/svg/LanguageSvg"
 import AboutSvg from "../../media/svg/AboutSvg"
-import LogoutSvg from "../../media/svg/LogoutSvg"
 import AccountToolsItem from "../components/AccountToolsItem"
 import portal from "../../media/images/portal.png"
 import food from "../../media/images/food.png"
@@ -17,12 +14,16 @@ import other from "../../media/images/other.png"
 import login from "../../media/images/login.png"
 import Button from "../../seyed-modules/components/Button"
 import urlConstant from "../../constant/urlConstant"
+import AccountLogout from "../components/AccountLogout"
+import AccountLanguage from "../components/AccountLanguage"
+import AccountDisplay from "../components/AccountDisplay"
 
 function AccountPage()
 {
     const {textConstant} = GetTextConstant()
     const {state: user} = useContext(AuthContext)
     const {avatar, name, email} = user || {}
+
     return (
         <div className="account">
             <div className="account-detail">
@@ -49,10 +50,10 @@ function AccountPage()
             </div>
             <div className="account-setting">
                 <div className="account-setting-title">{textConstant.setting}</div>
-                <AccountSettingItem link={null} Icon={DisplaySvg} title={textConstant.display}/>
-                <AccountSettingItem link={null} Icon={LanguageSvg} title={textConstant.chooseLanguage}/>
+                <AccountDisplay/>
+                <AccountLanguage/>
                 <AccountSettingItem link={null} Icon={AboutSvg} title={textConstant.aboutUs}/>
-                <AccountSettingItem link={null} Icon={LogoutSvg} title={textConstant.logout} isLogout/>
+                <AccountLogout/>
             </div>
             <div className="account-tools">
                 <div className="account-setting-title">{textConstant.tools}</div>
