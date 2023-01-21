@@ -2,7 +2,7 @@ import cookieHelper from "../seyed-modules/helpers/cookieHelper"
 
 function getToken()
 {
-    return cookieHelper.getItem("token") || "user-505-Ms4oyb5mZqo4TaEXKkBDeG4rdecdNclY"
+    return cookieHelper.getItem("token") || "GTYMA9gCDZHZDV5P"
 }
 
 export default getToken
