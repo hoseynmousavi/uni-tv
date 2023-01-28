@@ -39,6 +39,10 @@ const faTextConstant = {
     categories: count => `دسته‌بندی‌ها ${count ? `(${count})` : ""}`,
     similarVideos: "ویدئوهای مشابه",
     loginRegister: "ثبت‌نام / ورود",
+    firstName: "نام",
+    lastName: "نام خانوادگی",
+    save: "ذخیره",
+    editAvatar: "ویرایش تصویر",
 }
 
 export default faTextConstant

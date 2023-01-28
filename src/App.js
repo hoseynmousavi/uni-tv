@@ -10,6 +10,7 @@ import Navbar from "./views/containers/Navbar"
 
 const VideoPage = lazy(() => import("./views/pages/VideoPage"))
 const ArchivePage = lazy(() => import("./views/pages/ArchivePage"))
+const ProfilePage = lazy(() => import("./views/pages/ProfilePage"))
 const AccountPage = lazy(() => import("./views/pages/AccountPage"))
 const CategoryPage = lazy(() => import("./views/pages/CategoryPage"))
 const HomePage = lazy(() => import("./views/pages/HomePage"))
@@ -23,9 +24,10 @@ function App()
             <Switch desktopAnimation isTab tabClassName="main-tab">
                 <Route path={urlConstant.video(":videoId")} render={route => <VideoPage key={route?.match?.params?.videoId} route={route}/>}/>
                 <Route path={urlConstant.archive} render={() => <ArchivePage/>}/>
+                <PrivateRoute path={urlConstant.profile} render={() => <ProfilePage/>} user={user} redirectUrl={urlConstant.home}/>
                 <Route path={urlConstant.account} render={() => <AccountPage/>}/>
                 <Route path={urlConstant.category(":id")} render={route => <CategoryPage route={route}/>}/>
-                <PrivateRoute user={user} redirectUrl={urlConstant.home} path={urlConstant.login} render={() => <LoginPage/>} ifNotLogin dontChange/>
+                <PrivateRoute path={urlConstant.login} render={() => <LoginPage/>} user={user} redirectUrl={urlConstant.home} ifNotLogin dontChange/>
                 <Route path={urlConstant.home} render={() => <HomePage/>}/>
             </Switch>
             <Navbar/>

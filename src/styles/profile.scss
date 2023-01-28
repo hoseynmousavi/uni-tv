@@ -1,0 +1,34 @@
+.profile {
+  min-height: var(--full-height);
+  background-color: var(--page-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-fields {
+  padding: var(--mobile-first-solid-padding);
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 56px;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-edit-img {
+  margin-top: 8px;
+  font-size: var(--small-font);
+  color: var(--link-color);
+  font-family: "my-font-demibold", serif;
+  padding: 8px;
+  border-radius: var(--first-radius);
+}

@@ -23,6 +23,13 @@
   border-radius: 50%;
   cursor: pointer;
   margin-inline-start: -12px;
+
+  &.profile-back {
+    position: absolute;
+    margin: 0;
+    inset-inline-start: calc(var(--mobile-first-solid-padding) - 12px);
+    top: calc(var(--mobile-first-solid-padding) / 2);
+  }
 }
 
 .category-header-back-icon {

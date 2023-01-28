@@ -33,7 +33,7 @@ function AccountPage()
                             <ImageShow className="account-detail-avatar" src={avatar}/>
                             <div className="account-detail-name">{name}</div>
                             <div className="account-detail-email">{email}</div>
-                            <Link>
+                            <Link to={urlConstant.profile}>
                                 <Material className="account-detail-edit" backgroundColor={createMaterialColor({variable: "--link-color"})}>
                                     {textConstant.editAccount}
                                 </Material>
