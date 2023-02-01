@@ -20,12 +20,11 @@
 }
 
 .account-detail-login-img {
-  margin: 0 auto 8px;
-  width: 70%;
+  margin: 0 auto 16px;
+  width: 50%;
 
   img {
     width: 100%;
-    aspect-ratio: 3 / 2;
   }
 }
 
@@ -132,27 +131,30 @@
 
 .account-tools-carts {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   padding: 0 var(--mobile-second-solid-padding);
 }
 
-.account-tools-cart-item {
+.account-tools-cart {
   flex-grow: 1;
   width: 30%;
+}
+
+.account-tools-cart-item {
+  width: 100%;
   border-radius: var(--second-radius);
+  cursor: pointer;
 }
 
 .account-tools-cart-item-img {
   width: 100%;
-  padding: 4px;
   border: 1px solid var(--second-border-color);
   border-radius: var(--second-radius);
 
   img {
     aspect-ratio: 110 / 80;
     border: none;
-    padding: 0;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 

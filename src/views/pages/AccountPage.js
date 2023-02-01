@@ -58,8 +58,8 @@ function AccountPage()
             <div className="account-tools">
                 <div className="account-setting-title">{textConstant.tools}</div>
                 <div className="account-tools-carts">
-                    <AccountToolsItem title={textConstant.portal} img={portal}/>
-                    <AccountToolsItem title={textConstant.food} img={food}/>
+                    <AccountToolsItem title={textConstant.portal} img={portal} href={process.env.REACT_APP_PORTAL_LINK}/>
+                    <AccountToolsItem title={textConstant.food} img={food} href={process.env.REACT_APP_FOOD_LINK}/>
                     <AccountToolsItem title={textConstant.other} img={other}/>
                 </div>
             </div>

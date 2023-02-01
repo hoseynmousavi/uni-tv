@@ -56,12 +56,41 @@ function logout()
     return request.post({url: apiUrlsConstant.logout, data: {token: getToken()}, headers: getHeader()})
 }
 
+function update({user, dispatch})
+{
+    return request.post({url: apiUrlsConstant.update, data: {...user, token: getToken()}, headers: getHeader()})
+        .then(({result, data, error}) =>
+        {
+            if (result && data.length === 1)
+            {
+                getUser({dispatch})
+                return data[0].message
+            }
+            else errorManager({error})
+        })
+}
+
+function updateAvatar({avatar, dispatch})
+{
+    const data = new FormData()
+    data.append("token", getToken())
+    data.append("avatar", avatar)
+    return request.post({url: apiUrlsConstant.updateAvatar, data, headers: getHeader()})
+        .then(({result, data, error}) =>
+        {
+            if (result && data?.length === 1) setUser({user: {avatar: data[0].url}, dispatch})
+            else errorManager({error})
+        })
+}
+
 const AuthActions = {
     login,
     register,
     getUser,
     setUser,
     logout,
+    update,
+    updateAvatar,
 }
 
 export default AuthActions
