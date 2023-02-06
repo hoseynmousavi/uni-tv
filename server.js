@@ -1,12 +1,17 @@
 const express = require("express")
 const fs = require("fs")
 const path = require("path")
-const dotenv = require("dotenv")
 
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-dotenv.config({path: path.resolve(process.cwd(), ".env")})
+
+app.route("/.well-known/assetlinks.json").get((req, res) =>
+{
+    res.setHeader("Vary", "Accept-Encoding")
+    res.setHeader("Cache-Control", "max-age=2592000, public")
+    res.sendFile(path.join(__dirname, `/build/assetlinks.json`))
+})
 
 app.route("/static/:folder/:file").get((req, res) =>
 {
@@ -17,13 +22,6 @@ app.route("/static/:folder/:file").get((req, res) =>
         res.sendFile(path.join(__dirname, `/build/static/${req.params.folder}/${req.params.file}`))
     }
     else res.sendStatus(404)
-})
-
-app.route("/.well-known/assetlinks.json").get((req, res) =>
-{
-    res.setHeader("Vary", "Accept-Encoding")
-    res.setHeader("Cache-Control", "max-age=2592000, public")
-    res.sendFile(path.join(__dirname, `/build/assetlinks.json`))
 })
 
 app.route("/:file").get((req, res) =>
@@ -49,4 +47,4 @@ app.route("*").get((req, res) =>
     res.sendFile(path.join(__dirname, "/build/index.html"))
 })
 
-app.listen(process.env.REACT_APP_PORT, () => console.log(`Server is running in ${process.env.REACT_APP_PORT} ... `))
+app.listen(80, () => console.log(`Server is running in ${process.env.REACT_APP_PORT} ... `))
