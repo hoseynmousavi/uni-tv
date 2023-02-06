@@ -63,7 +63,7 @@ function update({user, dispatch})
         {
             if (result && data.length === 1)
             {
-                getUser({dispatch})
+                setUser({user, dispatch})
                 return data[0].message
             }
             else errorManager({error})
