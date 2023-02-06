@@ -10,9 +10,14 @@ function CategoryHeader({data, isSearch, onSearchChange})
     const {title} = data || {}
     return (
         <header className="category-header">
-            <Material className="category-header-back" onClick={goBack}>
-                <BackSvg className="category-header-back-icon"/>
-            </Material>
+            {
+                isSearch ?
+                    <div className="category-header-back"/>
+                    :
+                    <Material className="category-header-back" onClick={goBack}>
+                        <BackSvg className="category-header-back-icon"/>
+                    </Material>
+            }
             {
                 isSearch && onSearchChange ?
                     <Input className="category-header-search"

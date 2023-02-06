@@ -15,12 +15,14 @@ import AccountDisplay from "../components/AccountDisplay"
 import AccountSvg from "../../media/svg/AccountSvg"
 import CategoryHeader from "../containers/CategoryHeader"
 import DownloadSvg from "../../media/svg/DownloadSvg"
+import getUserFixName from "../../helpers/getUserFixName"
 
 function AccountPage()
 {
     const {textConstant} = GetTextConstant()
     const {state: user} = useContext(AuthContext)
-    const {avatar, name, email} = user || {}
+    const {avatar, email} = user || {}
+    const name = getUserFixName({user, short: false})
 
     return (
         <div className="account">
