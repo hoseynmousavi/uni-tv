@@ -6,13 +6,12 @@ import BtnBottomFullScreen from "../components/BtnBottomFullScreen"
 import Button from "../../seyed-modules/components/Button"
 import ImageShow from "../../seyed-modules/components/ImageShow"
 import Material from "../../seyed-modules/components/Material"
-import BackSvg from "../../media/svg/BackSvg"
-import goBack from "../../seyed-modules/helpers/goBack"
 import authActions from "../../context/auth/AuthActions"
 import closeAndToast from "../../seyed-modules/helpers/closeAndToast"
 import {SUCCESS_TOAST} from "../../seyed-modules/constant/toastTypes"
 import compressImage from "../../helpers/compressImage"
 import toastManager from "../../seyed-modules/helpers/toastManager"
+import CategoryHeader from "../containers/CategoryHeader"
 
 function ProfilePage()
 {
@@ -77,10 +76,7 @@ function ProfilePage()
 
     return (
         <div className="profile">
-            <Material className="category-header-back profile-back" onClick={goBack}>
-                <BackSvg className="category-header-back-icon"/>
-            </Material>
-
+            <CategoryHeader data={{title: textConstant.editProfile}}/>
             <div className="profile-avatar">
                 <ImageShow src={user.avatar} className="profile-img"/>
                 <label>
@@ -110,19 +106,15 @@ function ProfilePage()
                        disabled={isLoading}
                        fixScroll
                 />
-                {/*<Input name="email"*/}
-                {/*       validation="email"*/}
-                {/*       label={textConstant.email}*/}
-                {/*       placeholder={textConstant.email}*/}
-                {/*       defaultValue={user.email || ""}*/}
-                {/*       onChange={changeField}*/}
-                {/*       ltr*/}
-                {/*       disableSubmit={validationError}*/}
-                {/*       onSubmit={onSubmit}*/}
-                {/*       disabled={isLoading}*/}
-                {/*       type="email"*/}
-                {/*       fixScroll*/}
-                {/*/>*/}
+                <Input name="email"
+                       validation="email"
+                       label={textConstant.email}
+                       placeholder={textConstant.email}
+                       defaultValue={user.email || ""}
+                       ltr
+                       disabled
+                       type="email"
+                />
             </div>
             <BtnBottomFullScreen>
                 <Button className="login-bottom-btn" loading={isLoading} disable={validationError} type="second" onClick={onSubmit}>

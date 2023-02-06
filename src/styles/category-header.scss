@@ -1,6 +1,6 @@
 .category-header {
   height: var(--header-height);
-  background-color: var(--page-color);
+  background-color: var(--first-background-color);
   padding: 0 var(--mobile-second-solid-padding);
   display: flex;
   align-items: center;
@@ -23,13 +23,6 @@
   border-radius: 50%;
   cursor: pointer;
   margin-inline-start: -12px;
-
-  &.profile-back {
-    position: absolute;
-    margin: 0;
-    inset-inline-start: calc(var(--mobile-first-solid-padding) - 12px);
-    top: calc(var(--mobile-first-solid-padding) / 2);
-  }
 }
 
 .category-header-back-icon {

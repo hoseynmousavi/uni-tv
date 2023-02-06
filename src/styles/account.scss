@@ -1,14 +1,10 @@
 .account {
-  background-color: var(--page-color);
-  padding: 40px 0 calc(var(--nav-height) + 32px);
+  background-color: var(--first-background-color);
+  padding: var(--header-height) 0 32px;
   min-height: var(--full-height);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  &.switch-anime {
-    animation: switch-theme ease-in-out 750ms;
-  }
 }
 
 .account-detail {
@@ -21,7 +17,7 @@
 
 .account-detail-login-img {
   margin: 0 auto 16px;
-  width: 50%;
+  width: 280px;
 
   img {
     width: 100%;
@@ -43,6 +39,7 @@
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 24px;
 }
 
 .account-detail-name {
@@ -103,7 +100,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--third-color);
+  background-color: var(--second-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,42 +122,58 @@
   transform: rotate(180deg);
 }
 
-.account-tools {
-  width: 100%;
-}
-
-.account-tools-carts {
-  display: flex;
-  gap: 10px;
-  padding: 0 var(--mobile-second-solid-padding);
-}
-
-.account-tools-cart {
-  flex-grow: 1;
-  width: 30%;
-}
-
-.account-tools-cart-item {
-  width: 100%;
-  border-radius: var(--second-radius);
-  cursor: pointer;
-}
-
-.account-tools-cart-item-img {
-  width: 100%;
-  border: 1px solid var(--second-border-color);
-  border-radius: var(--second-radius);
-
-  img {
-    aspect-ratio: 110 / 80;
-    border: none;
-    object-fit: cover;
-  }
-}
-
-.account-tools-cart-item-title {
+.account-footer {
+  direction: ltr;
   text-align: center;
+}
+
+.account-footer-title {
+  font-size: var(--regular-font);
+  font-family: "my-font-bold", serif;
+}
+
+.account-footer-desc {
+  color: var(--second-text-color);
+  font-size: var(--small-font);
+  font-family: "my-font", serif;
+  margin-top: 4px;
+}
+
+.account-theme-cont {
+  position: relative;
+}
+
+.account-theme {
+  padding: 32px 0;
+}
+
+.account-theme-title {
+  color: var(--fifth-text-color);
+  font-size: var(--large-font);
+  font-family: "my-font-demibold", serif;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.account-theme-item {
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: var(--title-font);
-  margin-top: 8px;
+  padding: 0 var(--mobile-second-solid-padding);
+  height: 64px;
+}
+
+.account-theme-item-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.account-theme-checked {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset-inline-end: var(--mobile-second-solid-padding);
+  transition: bottom var(--first-transition);
 }

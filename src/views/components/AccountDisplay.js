@@ -2,43 +2,73 @@ import AccountSettingItem from "./AccountSettingItem"
 import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
 import DisplaySvg from "../../media/svg/DisplaySvg"
 import GetTheme from "../../seyed-modules/hooks/GetTheme"
-import toastManager from "../../seyed-modules/helpers/toastManager"
-import {INFO_TOAST} from "../../seyed-modules/constant/toastTypes"
+import {useEffect, useState} from "react"
+import Modal from "./Modal"
+import CheckSvg from "../../seyed-modules/media/svg/CheckSvg"
+import Material from "../../seyed-modules/components/Material"
+import SystemSvg from "../../media/svg/SystemSvg"
+import SunSvg from "../../media/svg/SunSvg"
+import MoonSvg from "../../media/svg/MoonSvg"
+import cookieHelper from "../../seyed-modules/helpers/cookieHelper"
+import goBack from "../../seyed-modules/helpers/goBack"
 
 function AccountDisplay()
 {
-    const {textConstant, toastConstant} = GetTextConstant()
-    const {isDark} = GetTheme()
+    const [openModal, setOpenModal] = useState(false)
+    const {textConstant} = GetTextConstant()
+    const [selectedOption, setSelectedOption] = useState("default")
+    const {changeTheme} = GetTheme()
+    const index = selectedOption === "dark" ? 1 : selectedOption === "light" ? 2 : 3
+    const bottom = `calc(32px + (${index - 1} * 64px) + 32px - 12px)`
 
-    function themeToggle()
+    useEffect(() =>
     {
-        toastManager.addToast({message: toastConstant.availableSoon, type: INFO_TOAST})
-        // if (!isChanging.current)
-        // {
-        //     isChanging.current = true
-        //     changeBodyOverflow(true)
-        //     document.body.style.transition = "all ease 300ms"
-        //     document.getElementById("index-temp").style.transition = "all ease 300ms"
-        //     contRef.current.style.transition = "all ease 300ms"
-        //     contRef.current.classList = "account switch-anime"
-        //     setTimeout(() =>
-        //     {
-        //         changeTheme({theme: isDark ? "light" : "dark", save: true})
-        //         setTimeout(() =>
-        //         {
-        //             isChanging.current = false
-        //             changeBodyOverflow(false)
-        //             document.body.style.removeProperty("transition")
-        //             document.getElementById("index-temp").style.removeProperty("transition")
-        //             contRef.current.style.removeProperty("transition")
-        //             contRef.current.classList = "account"
-        //         }, 300)
-        //     }, 400)
-        // }
+        const theme = cookieHelper.getItem("theme")
+        if (theme === "dark") setSelectedOption("dark")
+        else if (theme === "light") setSelectedOption("light")
+        else setSelectedOption("default")
+    }, [])
+
+    function select(value)
+    {
+        return function ()
+        {
+            setSelectedOption(value)
+            if (value === "dark") changeTheme({save: true, theme: "dark"})
+            else if (value === "light") changeTheme({save: true, theme: "light"})
+            else changeTheme({reset: true})
+            goBack()
+        }
+    }
+
+    function toggleModal()
+    {
+        setOpenModal(openModal => !openModal)
     }
 
     return (
-        <AccountSettingItem onClick={themeToggle} Icon={DisplaySvg} title={textConstant.darkMode} haveSwitch switchOn={isDark}/>
+        <>
+            <AccountSettingItem onClick={toggleModal} Icon={DisplaySvg} title={textConstant.darkMode}/>
+            {
+                openModal &&
+                <Modal className="account-theme-cont" contentClassName="account-theme" close={toggleModal}>
+                    <div className="account-theme-title">{textConstant.displayApp}</div>
+                    <CheckSvg className="account-theme-checked" style={{bottom}}/>
+                    <Material className="account-theme-item" onClick={select("default")}>
+                        <SystemSvg className="account-theme-item-icon"/>
+                        <div>{textConstant.themeSystem}</div>
+                    </Material>
+                    <Material className="account-theme-item" onClick={select("light")}>
+                        <SunSvg className="account-theme-item-icon"/>
+                        <div>{textConstant.themeDay}</div>
+                    </Material>
+                    <Material className="account-theme-item" onClick={select("dark")}>
+                        <MoonSvg className="account-theme-item-icon"/>
+                        <div>{textConstant.themeNight}</div>
+                    </Material>
+                </Modal>
+            }
+        </>
     )
 }
 

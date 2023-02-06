@@ -1,3 +1,9 @@
+.video {
+  min-height: var(--full-height);
+  padding-bottom: calc(var(--nav-height));
+  background-color: var(--first-background-color);
+}
+
 .video-player {
   position: sticky;
   top: 0;
@@ -44,5 +50,5 @@
   font-family: "my-font-demibold", serif;
   margin-top: 32px;
   padding: 32px var(--mobile-first-solid-padding);
-  border-top: 1px solid var(--third-background-color);
+  border-top: 1px solid var(--second-background-color);
 }

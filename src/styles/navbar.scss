@@ -6,7 +6,7 @@
   left: 0;
   height: var(--nav-height);
   padding-bottom: var(--bottom-env-padding);
-  box-shadow: var(--first-shadow);
+  box-shadow: var(--second-shadow);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -26,17 +26,17 @@
 
   &.active {
     .navbar-item-icon {
-      background-color: var(--third-background-color);
+      background-color: var(--second-background-color);
     }
 
     .navbar-item-icon-svg {
       path {
-        fill: var(--third-color);
+        fill: var(--second-color);
       }
     }
 
     .navbar-item-title {
-      color: var(--third-color);
+      color: var(--second-color);
     }
   }
 }

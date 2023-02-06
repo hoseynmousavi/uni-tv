@@ -45,7 +45,7 @@ function VideoPage({route: {match: {params: {videoId}}}})
     ScrollY({condition, updateParams: [getMore]})
 
     return (
-        <>
+        <div className="video">
             <div className="video-player" ref={contRef}>
 
             </div>
@@ -80,7 +80,7 @@ function VideoPage({route: {match: {params: {videoId}}}})
                         }
                     </>
             }
-        </>
+        </div>
     )
 }
 

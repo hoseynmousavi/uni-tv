@@ -1,9 +1,8 @@
 import Material from "../../seyed-modules/components/Material"
 import Link from "../../seyed-modules/components/Link"
 import ArrowSvg from "../../media/svg/ArrowSvg"
-import SwitchKey from "./SwitchKey"
 
-function AccountSettingItem({onClick, link, Icon, title, isLogout, haveSwitch, switchOn})
+function AccountSettingItem({onClick, link, Icon, title, isLogout})
 {
     return (
         <Link to={link} onClick={onClick}>
@@ -14,12 +13,7 @@ function AccountSettingItem({onClick, link, Icon, title, isLogout, haveSwitch, s
                     </div>
                     {title}
                 </div>
-                {
-                    haveSwitch ?
-                        <SwitchKey isOn={switchOn}/>
-                        :
-                        <ArrowSvg className="account-setting-item-arrow"/>
-                }
+                <ArrowSvg className="account-setting-item-arrow"/>
             </Material>
         </Link>
     )

@@ -1,7 +1,8 @@
 @import "../seyed-modules/styles/index";
 
 @import "animations";
-@import "switch-key";
+@import "vertical-panel";
+@import "modal";
 @import "button";
 @import "validation-error";
 @import "input";
@@ -18,6 +19,9 @@
 @import "category";
 @import "video";
 @import "profile";
+@import "services";
+@import "about";
+@import "send-video";
 
 @font-face {
   font-family: "my-font";

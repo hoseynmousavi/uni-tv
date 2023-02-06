@@ -20,24 +20,22 @@ function CategoryPage({route: {match: {params: {id}}}})
     ScrollY({condition, updateParams: [getMore]})
 
     return (
-        <>
+        <div className="category">
             <CategoryHeader data={data}/>
-            <div className="category">
-                {
-                    videos.length > 0 ?
-                        videos.map(data =>
-                            <CategoryVideoCart key={data.id} data={data}/>,
-                        )
-                        :
-                        !videosLoading && <div className="category-not-found">{textConstant.notFound}</div>
-                }
-                {
-                    videosLoading && [0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, index) =>
-                        <CategoryVideoCartSkeleton key={index}/>,
+            {
+                videos.length > 0 ?
+                    videos.map(data =>
+                        <CategoryVideoCart key={data.id} data={data}/>,
                     )
-                }
-            </div>
-        </>
+                    :
+                    !videosLoading && <div className="category-not-found">{textConstant.notFound}</div>
+            }
+            {
+                videosLoading && [0, 1, 2, 3, 4, 5, 6, 7, 8].map((item, index) =>
+                    <CategoryVideoCartSkeleton key={index}/>,
+                )
+            }
+        </div>
     )
 }
 

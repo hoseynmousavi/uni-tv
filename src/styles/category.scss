@@ -1,7 +1,8 @@
 .category {
   min-height: var(--full-height);
   padding-top: calc(var(--header-height) + var(--mobile-second-solid-padding));
-  background-color: var(--page-color);
+  padding-bottom: calc(var(--nav-height));
+  background-color: var(--first-background-color);
 }
 
 .category-not-found {

@@ -7,21 +7,19 @@ function HomePage()
 {
     const {isLoading, data} = GetCategories()
     return (
-        <>
+        <div className="home">
             <HomeHeader/>
-            <div className="home">
-                {
-                    isLoading ?
-                        <div className="loading-cont">
-                            <MyLoader width={32}/>
-                        </div>
-                        :
-                        data.map(item =>
-                            <CategorySlide key={item.id} data={item}/>,
-                        )
-                }
-            </div>
-        </>
+            {
+                isLoading ?
+                    <div className="loading-cont">
+                        <MyLoader width={32}/>
+                    </div>
+                    :
+                    data.map(item =>
+                        <CategorySlide key={item.id} data={item}/>,
+                    )
+            }
+        </div>
     )
 }
 

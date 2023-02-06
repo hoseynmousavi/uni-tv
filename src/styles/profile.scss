@@ -1,6 +1,6 @@
 .profile {
   min-height: var(--full-height);
-  background-color: var(--page-color);
+  background-color: var(--first-background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 56px;
+  padding-top: calc(var(--header-height) + 24px);
   flex-direction: column;
 }
 

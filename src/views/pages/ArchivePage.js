@@ -18,22 +18,20 @@ function ArchivePage()
     }
 
     return (
-        <>
+        <div className="archive">
             <CategoryHeader isSearch onSearchChange={onSearchChange}/>
-            <div className="archive">
-                <h1 className="archive-title">{textConstant.categories(showCategories.length)}</h1>
-                {
-                    isLoading ?
-                        <div className="loading-cont">
-                            <MyLoader width={32}/>
-                        </div>
-                        :
-                        showCategories.map(data =>
-                            <ArchiveCategoryItem key={data.id} data={data}/>,
-                        )
-                }
-            </div>
-        </>
+            <h1 className="archive-title">{textConstant.categories(showCategories.length)}</h1>
+            {
+                isLoading ?
+                    <div className="loading-cont">
+                        <MyLoader width={32}/>
+                    </div>
+                    :
+                    showCategories.map(data =>
+                        <ArchiveCategoryItem key={data.id} data={data}/>,
+                    )
+            }
+        </div>
     )
 }
 

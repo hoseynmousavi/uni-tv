@@ -19,7 +19,7 @@ const WrappedApp = withRouter(App)
 
 root.render(
     <LanguageProvider changeVariables={changeFontVariablesConstant}>
-        <ThemeProvider changeVariables={changeColorVariablesConstant} disable>
+        <ThemeProvider changeVariables={changeColorVariablesConstant}>
             <AuthProvider>
                 <CategoryProvider>
                     <VideoProvider>

@@ -9,7 +9,7 @@
   width: 100%;
   height: auto;
   border-radius: var(--first-radius);
-  background-color: var(--third-background-color);
+  background-color: var(--second-background-color);
   object-fit: cover;
   aspect-ratio: 368 / 204;
 
@@ -24,7 +24,7 @@
   margin: 8px 0 12px;
 
   &.skeleton {
-    background-color: var(--third-background-color);
+    background-color: var(--second-background-color);
     border-radius: var(--first-radius);
     position: relative;
     overflow: hidden;
@@ -52,7 +52,7 @@
   font-size: var(--small-font);
 
   &.skeleton {
-    background-color: var(--third-background-color);
+    background-color: var(--second-background-color);
     border-radius: var(--first-radius);
     position: relative;
     overflow: hidden;

@@ -1,0 +1,34 @@
+.about {
+  background-color: var(--first-background-color);
+  padding: calc(var(--header-height) + 2 * var(--mobile-second-solid-padding)) var(--mobile-second-solid-padding) calc(2 * var(--mobile-second-solid-padding));
+  min-height: var(--full-height);
+}
+
+.about-logo {
+  display: block;
+  width: 150px;
+}
+
+.about-text {
+  margin: 16px 0;
+  color: var(--forth-text-color);
+  line-height: var(--second-line-height);
+  text-align: justify;
+  text-align-last: start;
+  font-size: var(--small-font);
+}
+
+.about-title {
+  font-size: var(--title-font);
+  font-family: "my-font-bold", serif;
+}
+
+.about-desc {
+  margin-top: 8px;
+  color: var(--forth-text-color);
+  line-height: var(--second-line-height);
+  text-align: justify;
+  text-align-last: start;
+  font-size: var(--small-font);
+  white-space: pre-wrap;
+}

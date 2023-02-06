@@ -1,6 +1,6 @@
 .home-header {
   height: var(--header-height);
-  background-color: var(--page-color);
+  background-color: var(--first-background-color);
   padding: 0 var(--mobile-second-solid-padding);
   display: flex;
   align-items: center;
@@ -10,11 +10,7 @@
   right: 0;
   left: 0;
   z-index: var(--header-z-index);
-  transition: box-shadow ease 0.2s;
-
-  &.is-stick {
-    box-shadow: var(--first-shadow);
-  }
+  box-shadow: var(--first-shadow);
 }
 
 .home-header-section {
@@ -22,30 +18,21 @@
   align-items: center;
 }
 
-.home-header-logo {
+.home-header-title {
+  width: 150px;
+}
+
+.home-header-profile {
   width: 40px;
   height: 40px;
+  margin-inline-end: -12px;
   border-radius: 50%;
-  background-color: var(--third-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home-header-logo-icon {
-  width: 50%;
-  height: 50%;
-}
-
-.home-header-title {
-  margin-inline-start: 8px;
-  font-size: var(--large-font);
-  font-family: "my-font-bold", serif;
-}
-
-.home-header-btn {
-  width: auto;
-  height: 36px;
-  font-size: var(--title-font);
-  font-family: "my-font", serif;
+.home-header-profile-icon {
+  width: 16px;
+  height: 16px;
 }

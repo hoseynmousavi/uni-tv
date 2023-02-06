@@ -1,0 +1,41 @@
+.vertical-panel-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--full-height);
+  z-index: var(--modal-z-index);
+  background-color: var(--first-modal-background-color);
+  opacity: 0;
+}
+
+.vertical-panel {
+  position: fixed;
+  z-index: var(--modal-z-index);
+  top: var(--full-height);
+  right: 0;
+  left: 0;
+  background-color: var(--first-background-color);
+  border-radius: var(--second-radius) var(--second-radius) 0 0;
+  overflow: hidden;
+  transform: perspective(0);
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+}
+
+.vertical-panel-line {
+  margin: 8px auto 8px;
+  width: 40px;
+  height: 4px;
+  background-color: var(--first-border-color);
+  border-radius: var(--second-radius);
+}
+
+.vertical-panel-content {
+  overflow-y: visible;
+  overflow-x: hidden;
+  padding: 32px 24px;
+}
