@@ -26,5 +26,8 @@
   "dir": "rtl",
   "lang": "fa",
   "description": "DESCRIPTION",
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "categories": [
+    "education"
+  ]
 }
