@@ -1,8 +1,6 @@
 const faTextConstant = {
     loginTitle: `ورود به ${process.env.REACT_APP_NAME}`,
-    loginDesc: "لطفا ایمیل و رمز عبورتون وارد کنید",
     registerTitle: `ثبت‌نام در ${process.env.REACT_APP_NAME}`,
-    registerDesc: "لطفا ایمیل و رمز عبور دلخواهتون رو وارد کنید",
     privacyIntro: "ورود شما به معنی قبول",
     privacyTitle: "قوانین حریم خصوصی",
     privacyEnd: "می‌باشد",

@@ -34,10 +34,13 @@ function AccountDisplay()
         return function ()
         {
             setSelectedOption(value)
-            if (value === "dark") changeTheme({save: true, theme: "dark"})
-            else if (value === "light") changeTheme({save: true, theme: "light"})
-            else changeTheme({reset: true})
-            goBack()
+            setTimeout(() =>
+            {
+                if (value === "dark") changeTheme({save: true, theme: "dark"})
+                else if (value === "light") changeTheme({save: true, theme: "light"})
+                else changeTheme({reset: true})
+                setTimeout(goBack, 100)
+            }, 400)
         }
     }
 

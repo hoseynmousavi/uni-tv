@@ -4,7 +4,7 @@
   top: 50%;
   z-index: var(--modal-z-index);
   transform: translate3d(-50%, -50%, 0);
-  box-shadow: 0 14px 24px -5px rgba(170, 170, 175, 0.15);
+  box-shadow: var(--first-shadow);
   background-color: var(--first-background-color);
   border-radius: var(--third-radius);
   padding: 32px 24px;

@@ -14,6 +14,7 @@ import AuthActions from "../../context/auth/AuthActions"
 import {AuthContext} from "../../context/auth/AuthReducer"
 import parseQueryString from "../../seyed-modules/helpers/parseQueryString"
 import urlConstant from "../../constant/urlConstant"
+import CategoryHeader from "../containers/CategoryHeader"
 
 function LoginPage()
 {
@@ -76,11 +77,12 @@ function LoginPage()
 
     return (
         <div className="login">
+            <CategoryHeader data={{title: textConstant[isRegister ? "registerTitle" : "loginTitle"]}} />
             <div/>
             <div className="login-content">
                 <LogoSvg className="login-content-logo"/>
-                <h1 className="login-content-title">{textConstant[isRegister ? "registerTitle" : "loginTitle"]}</h1>
-                <p className="login-content-desc">{textConstant[isRegister ? "registerDesc" : "loginDesc"]}</p>
+                {/*<h1 className="login-content-title">{}</h1>*/}
+                {/*<p className="login-content-desc">{textConstant[isRegister ? "registerDesc" : "loginDesc"]}</p>*/}
                 <Input className="login-content-email"
                        type="email"
                        validation="email"
