@@ -19,6 +19,13 @@ app.route("/static/:folder/:file").get((req, res) =>
     else res.sendStatus(404)
 })
 
+app.route("/.well-known/assetlinks.json").get((req, res) =>
+{
+    res.setHeader("Vary", "Accept-Encoding")
+    res.setHeader("Cache-Control", "max-age=2592000, public")
+    res.sendFile(path.join(__dirname, `/build/assetlinks.json`))
+})
+
 app.route("/:file").get((req, res) =>
 {
     res.setHeader("Vary", "Accept-Encoding")
