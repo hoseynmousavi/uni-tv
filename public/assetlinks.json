@@ -1,6 +1,23 @@
-[{
-        "relation": ["delegate_permission/common.handle_all_urls"],
-        "target" : { "namespace": "android_app", "package_name": "ir.ac.ut.tv.app.twa",
-                     "sha256_cert_fingerprints": ["7E:F1:AA:BC:F4:6E:DD:EB:70:77:85:16:D9:2D:C5:1C:30:C0:31:4A:41:0B:A0:DC:2A:B4:DC:3D:BC:2F:9E:82"] }
-      }
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ir.ac.ut.tv.app.twa",
+      "sha256_cert_fingerprints": [
+        "7E:F1:AA:BC:F4:6E:DD:EB:70:77:85:16:D9:2D:C5:1C:30:C0:31:4A:41:0B:A0:DC:2A:B4:DC:3D:BC:2F:9E:82"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "check_validation"
+    ],
+    "target": {
+      "namespace": "cafebazaar_twa",
+      "package_name": "ir.ac.ut.tv.app.twa"
+    }
+  }
 ]
