@@ -146,6 +146,10 @@
 .account-theme-cont {
   width: 400px;
   max-width: 100%;
+
+  @media screen and (min-width: 480px) {
+    padding: 32px 0;
+  }
 }
 
 .account-theme {
@@ -161,6 +165,7 @@
 }
 
 .account-theme-item {
+  cursor: pointer;
   width: 100%;
   display: flex;
   align-items: center;

@@ -1,6 +1,6 @@
 .send-video {
   background-color: var(--first-background-color);
-  padding: calc(var(--header-height) + 2 * var(--mobile-second-solid-padding)) var(--mobile-second-solid-padding) var(--mobile-second-solid-padding);
+  padding: calc(var(--header-height) + 2 * var(--mobile-second-solid-padding)) var(--mobile-second-solid-padding) calc(var(--mobile-second-solid-padding) + var(--bottom-env-padding));
   min-height: var(--full-height);
   display: flex;
   flex-direction: column;
