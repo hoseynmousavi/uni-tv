@@ -1,6 +1,6 @@
 .services {
   min-height: var(--full-height);
-  padding: calc(var(--header-height) + var(--mobile-second-solid-padding)) 0 var(--nav-height);
+  padding: calc(var(--header-height) + var(--mobile-second-solid-padding)) 0 calc(var(--nav-height) + var(--mobile-second-solid-padding));
   background-color: var(--first-background-color);
 }
 

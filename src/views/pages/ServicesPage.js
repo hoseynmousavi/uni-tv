@@ -14,9 +14,13 @@ function ServicesPage()
             <HomeHeader/>
             <div className="services">
                 <div className="services-items">
-                    <AccountToolsItem title={textConstant.portal} img={portal} href={process.env.REACT_APP_PORTAL_LINK}/>
-                    <AccountToolsItem title={textConstant.food} img={food} href={process.env.REACT_APP_FOOD_LINK}/>
-                    <AccountToolsItem title={textConstant.other} img={other}/>
+                    <AccountToolsItem title={textConstant.service1} img={portal} href={process.env.REACT_APP_SERVICE1_LINK}/>
+                    <AccountToolsItem title={textConstant.service2} img={food} href={process.env.REACT_APP_SERVICE2_LINK}/>
+                    <AccountToolsItem title={textConstant.service3} img={other} href={process.env.REACT_APP_SERVICE3_LINK}/>
+                    <AccountToolsItem title={textConstant.service4} img={other} href={process.env.REACT_APP_SERVICE4_LINK}/>
+                    <AccountToolsItem title={textConstant.service5} img={other} href={process.env.REACT_APP_SERVICE5_LINK}/>
+                    <AccountToolsItem title={textConstant.service6} img={other} href={process.env.REACT_APP_SERVICE6_LINK}/>
+                    <AccountToolsItem title={textConstant.service7} img={other} href={process.env.REACT_APP_SERVICE7_LINK}/>
                 </div>
             </div>
         </>
