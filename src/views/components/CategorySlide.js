@@ -30,16 +30,22 @@ function CategorySlide({data: {title, id}})
     return (
         <div className={`category-slide ${showSlide ? "" : "hide"}`}>
             <div className="category-slide-header" ref={contRef}>
-                <div className="category-slide-header-title">{title}</div>
                 {
-                    (data?.length > 0 || isLoading) &&
-                    <Link to={urlConstant.category(id)}>
-                        <Material className="category-slide-header-btn" backgroundColor={createMaterialColor({variable: "--first-color"})}>
-                            {textConstant.showAll}
-                            <ArrowSvg className="category-slide-header-btn-icon"/>
-                        </Material>
-                    </Link>
+                    data.length > 0 ?
+                        <div key="title" className="category-slide-header-title show">
+                            {title}
+                        </div>
+                        :
+                        <div key="skeleton" className="category-slide-header-title skeleton">
+                            <span>‌</span>
+                        </div>
                 }
+                <Link to={id && urlConstant.category(id)}>
+                    <Material className="category-slide-header-btn" backgroundColor={createMaterialColor({variable: "--first-color"})}>
+                        {textConstant.showAll}
+                        <ArrowSvg className="category-slide-header-btn-icon"/>
+                    </Material>
+                </Link>
             </div>
             <div className="category-slide-content hide-scroll">
                 {

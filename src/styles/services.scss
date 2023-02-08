@@ -1,6 +1,6 @@
 .services {
   min-height: var(--full-height);
-  padding: calc(var(--header-height) + var(--mobile-second-solid-padding)) 0 calc(var(--nav-height) + var(--mobile-second-solid-padding));
+  padding: calc(var(--header-height) + var(--mobile-first-solid-padding)) 0 calc(var(--nav-height) + var(--mobile-first-solid-padding));
   background-color: var(--first-background-color);
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px 12px;
-  padding: 0 var(--mobile-second-solid-padding);
+  padding: 0 var(--mobile-first-solid-padding);
 }
 
 .services-items-cart {

@@ -30,8 +30,8 @@
 
 .account-detail-login-btn-inner {
   border-radius: var(--first-radius);
-  width: calc(100% - (2 * var(--mobile-second-solid-padding)));
-  margin: 0 var(--mobile-second-solid-padding);
+  width: calc(100% - (2 * var(--mobile-first-solid-padding)));
+  margin: 0 var(--mobile-first-solid-padding);
 }
 
 .account-detail-avatar {
@@ -72,7 +72,7 @@
 .account-setting-title {
   font-size: var(--title-font);
   font-family: "my-font-demibold", serif;
-  padding: 0 var(--mobile-second-solid-padding);
+  padding: 0 var(--mobile-first-solid-padding);
   margin-bottom: 16px;
 }
 
@@ -85,7 +85,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px var(--mobile-second-solid-padding);
+  padding: 8px var(--mobile-first-solid-padding);
   cursor: pointer;
 }
 
@@ -171,7 +171,7 @@
   align-items: center;
   gap: 12px;
   font-size: var(--title-font);
-  padding: 0 var(--mobile-second-solid-padding);
+  padding: 0 var(--mobile-first-solid-padding);
   height: 64px;
 }
 
@@ -184,7 +184,7 @@
   width: 24px;
   height: 24px;
   position: absolute;
-  inset-inline-end: var(--mobile-second-solid-padding);
+  inset-inline-end: var(--mobile-first-solid-padding);
   transition: bottom var(--first-transition);
 
   path {

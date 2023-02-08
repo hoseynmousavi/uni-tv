@@ -1,7 +1,7 @@
 .category-video-cart {
-  margin: 0 var(--mobile-second-solid-padding) 32px;
+  margin: 0 var(--mobile-first-solid-padding) 32px;
   border-radius: var(--first-radius);
-  width: calc(100% - (2 * var(--mobile-second-solid-padding)));
+  width: calc(100% - (2 * var(--mobile-first-solid-padding)));
   cursor: pointer;
 }
 

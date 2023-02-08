@@ -19,9 +19,16 @@ function Navbar()
 
     return (
         <nav className={`navbar ${hide ? "hide" : ""}`}>
-            <NavbarItem title={textConstant.home} Icon={HomeSvg} link={urlConstant.home} location={location}/>
-            <NavbarItem title={textConstant.archive} Icon={ArchiveSvg} link={urlConstant.archive} location={location}/>
-            <NavbarItem title={textConstant.services} Icon={ServicesSvg} link={urlConstant.services} location={location}/>
+            {/*<div className="navbar-download">*/}
+            {/*    <div>*/}
+            {/*        <div>اپلیکیشن شبکه دانشگاه تهران</div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            <div className="navbar-main">
+                <NavbarItem title={textConstant.home} Icon={HomeSvg} link={urlConstant.home} location={location}/>
+                <NavbarItem title={textConstant.archive} Icon={ArchiveSvg} link={urlConstant.archive} location={location}/>
+                <NavbarItem title={textConstant.services} Icon={ServicesSvg} link={urlConstant.services} location={location}/>
+            </div>
         </nav>
     )
 }

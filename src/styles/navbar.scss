@@ -4,18 +4,30 @@
   bottom: 0;
   right: 0;
   left: 0;
-  height: var(--nav-height);
-  padding-bottom: var(--bottom-env-padding);
-  box-shadow: var(--second-shadow);
+  transition: transform ease 0.3s;
+
+  &.hide {
+    transform: translate3d(0, calc(var(--nav-height) + 1px), 0);
+  }
+}
+
+.navbar-download {
+  height: 60px;
+  padding: 0 var(--mobile-first-solid-padding);
+  background-color: #363636;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-main {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: var(--first-background-color);
-  transition: transform ease 0.3s;
-
-  &.hide {
-    transform: translate3d(0, 100%, 0);
-  }
+  height: var(--nav-height);
+  padding-bottom: var(--bottom-env-padding);
+  box-shadow: var(--second-shadow);
 }
 
 .navbar-item {
