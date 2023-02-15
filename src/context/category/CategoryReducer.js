@@ -22,7 +22,7 @@ function CategoryProvider({children})
             case GET_CATEGORIES:
             {
                 const {data} = action.payload
-                const items = data[0]
+                const items = data[0]?.reverse?.() ?? []
                 return {
                     ...state,
                     list: {
