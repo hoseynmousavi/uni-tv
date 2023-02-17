@@ -1,9 +1,8 @@
 import {createContext, useEffect, useReducer, useState} from "react"
 import {LOGOUT, SET_USER} from "./AuthTypes"
 import AuthActions from "./AuthActions"
-import logoutManager from "../../seyed-modules/helpers/logoutManager"
-import cookieHelper from "../../seyed-modules/helpers/cookieHelper"
-import LoadingWrapper from "../../seyed-modules/components/LoadingWrapper"
+import logoutManager from "../../modules/helpers/logoutManager"
+import LoadingWrapper from "../../modules/components/LoadingWrapper"
 
 export const AuthContext = createContext(null)
 
@@ -16,7 +15,7 @@ function AuthProvider({children})
 
     useEffect(() =>
     {
-        const token = cookieHelper.getItem("token")
+        const token = localStorage.getItem("token")
         if (token)
         {
             const user = localStorage.getItem("user")
@@ -70,14 +69,14 @@ function AuthProvider({children})
         {
             if (user.token)
             {
-                cookieHelper.setItem("token", user.token)
+                localStorage.setItem("token", user.token)
                 delete user.token
             }
             localStorage.setItem("user", JSON.stringify(user))
         }
         else
         {
-            cookieHelper.removeItem("token")
+            localStorage.removeItem("token")
             localStorage.clear()
         }
     }

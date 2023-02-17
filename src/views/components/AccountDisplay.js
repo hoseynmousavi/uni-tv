@@ -1,16 +1,15 @@
 import AccountSettingItem from "./AccountSettingItem"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import DisplaySvg from "../../media/svg/DisplaySvg"
-import GetTheme from "../../seyed-modules/hooks/GetTheme"
+import GetTheme from "../../modules/hooks/GetTheme"
 import {useEffect, useState} from "react"
 import Modal from "./Modal"
-import CheckSvg from "../../seyed-modules/media/svg/CheckSvg"
-import Material from "../../seyed-modules/components/Material"
+import CheckSvg from "../../modules/media/svg/CheckSvg"
+import Material from "../../modules/components/Material"
 import SystemSvg from "../../media/svg/SystemSvg"
 import SunSvg from "../../media/svg/SunSvg"
 import MoonSvg from "../../media/svg/MoonSvg"
-import cookieHelper from "../../seyed-modules/helpers/cookieHelper"
-import goBack from "../../seyed-modules/helpers/goBack"
+import goBack from "../../modules/helpers/goBack"
 
 function AccountDisplay()
 {
@@ -23,7 +22,7 @@ function AccountDisplay()
 
     useEffect(() =>
     {
-        const theme = cookieHelper.getItem("theme")
+        const theme = localStorage.getItem("theme")
         if (theme === "dark") setSelectedOption("dark")
         else if (theme === "light") setSelectedOption("light")
         else setSelectedOption("default")

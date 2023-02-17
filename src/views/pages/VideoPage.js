@@ -1,12 +1,12 @@
 import GetVideoItem from "../../hooks/GetVideoItem"
 import {useRef, useState} from "react"
 import getVideoTime from "../../helpers/getVideoTime"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
-import MyLoader from "../../seyed-modules/components/MyLoader"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
+import MyLoader from "../../modules/components/MyLoader"
 import CategoryVideoCart from "../components/CategoryVideoCart"
 import CategoryVideoCartSkeleton from "../components/CategoryVideoCartSkeleton"
 import GetVideoList from "../../hooks/GetVideoList"
-import ScrollY from "../../seyed-modules/hooks/ScrollY"
+import ScrollY from "../../modules/hooks/ScrollY"
 
 function VideoPage({route: {match: {params: {videoId}}}})
 {

@@ -1,5 +1,5 @@
 import {useContext, useRef} from "react"
-import GetData from "../seyed-modules/request/GetData"
+import GetData from "../modules/request/GetData"
 import CategoryActions from "../context/category/CategoryActions"
 import {CategoryContext} from "../context/category/CategoryReducer"
 

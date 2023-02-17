@@ -1,5 +1,5 @@
-import Material from "../../seyed-modules/components/Material"
-import Link from "../../seyed-modules/components/Link"
+import Material from "../../modules/components/Material"
+import Link from "../../modules/components/Link"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 
 function AccountSettingItem({onClick, link, Icon, title, isLogout})

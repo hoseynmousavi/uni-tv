@@ -1,7 +1,7 @@
 import GetCategories from "../../hooks/GetCategories"
 import CategorySlide from "../components/CategorySlide"
 import HomeHeader from "../containers/HomeHeader"
-import MyLoader from "../../seyed-modules/components/MyLoader"
+import MyLoader from "../../modules/components/MyLoader"
 
 function HomePage()
 {

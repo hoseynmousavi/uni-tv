@@ -1,13 +1,13 @@
-import Material from "../../seyed-modules/components/Material"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import Material from "../../modules/components/Material"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import GetVideoList from "../../hooks/GetVideoList"
 import VideoRowItem from "./VideoRowItem"
 import VideoRowItemSkeleton from "./VideoRowItemSkeleton"
 import {useEffect, useRef, useState} from "react"
-import firstView from "../../seyed-modules/helpers/firstView"
-import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
-import Link from "../../seyed-modules/components/Link"
+import firstView from "../../modules/helpers/firstView"
+import createMaterialColor from "../../modules/helpers/createMaterialColor"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function CategorySlide({data: {title, id}})

@@ -1,8 +1,8 @@
-import Material from "../../seyed-modules/components/Material"
+import Material from "../../modules/components/Material"
 import BackSvg from "../../media/svg/BackSvg"
-import goBack from "../../seyed-modules/helpers/goBack"
+import goBack from "../../modules/helpers/goBack"
 import Input from "../components/Input"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 
 function CategoryHeader({data, isSearch, onSearchChange})
 {

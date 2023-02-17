@@ -1,9 +1,9 @@
 import NavbarItem from "../components/NavbarItem"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import ArchiveSvg from "../../media/svg/ArchiveSvg"
 import HomeSvg from "../../media/svg/HomeSvg"
 import urlConstant from "../../constant/urlConstant"
-import GetCurrentLocation from "../../seyed-modules/hooks/GetCurrentLocation"
+import GetCurrentLocation from "../../modules/hooks/GetCurrentLocation"
 import ServicesSvg from "../../media/svg/ServicesSvg"
 
 function Navbar()

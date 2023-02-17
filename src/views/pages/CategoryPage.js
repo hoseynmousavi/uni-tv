@@ -2,8 +2,8 @@ import CategoryHeader from "../containers/CategoryHeader"
 import GetCategories from "../../hooks/GetCategories"
 import GetVideoList from "../../hooks/GetVideoList"
 import CategoryVideoCart from "../components/CategoryVideoCart"
-import ScrollY from "../../seyed-modules/hooks/ScrollY"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import ScrollY from "../../modules/hooks/ScrollY"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import CategoryVideoCartSkeleton from "../components/CategoryVideoCartSkeleton"
 
 function CategoryPage({route: {match: {params: {id}}}})

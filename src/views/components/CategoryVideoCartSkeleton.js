@@ -1,4 +1,4 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
+import ImageShow from "../../modules/components/ImageShow"
 
 function CategoryVideoCartSkeleton()
 {

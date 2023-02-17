@@ -7,7 +7,7 @@ import service4 from "../../media/images/service4.png"
 import service5 from "../../media/images/service5.png"
 import service6 from "../../media/images/service6.png"
 import service7 from "../../media/images/service7.png"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 
 function ServicesPage()
 {

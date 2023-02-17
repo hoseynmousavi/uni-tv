@@ -1,14 +1,14 @@
 import {forwardRef, memo, useEffect, useRef, useState} from "react"
 import regexConstant from "../../constant/regexConstant"
 import checkNationalCode from "../../helpers/checkNationalCode"
-import numberCorrection from "../../seyed-modules/helpers/numberCorrection"
+import numberCorrection from "../../modules/helpers/numberCorrection"
 import inputKeyDownEnter from "../../helpers/inputKeyDownEnter"
 import validationConstant from "../../constant/validationConstant"
-import onScroll from "../../seyed-modules/helpers/onScroll"
-import showPhoneNumber from "../../seyed-modules/helpers/showPhoneNumber"
+import onScroll from "../../modules/helpers/onScroll"
+import showPhoneNumber from "../../modules/helpers/showPhoneNumber"
 import ShowValidationError from "./ShowValidationError"
 import fixInputScroll from "../../helpers/fixInputScroll"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 
 const Input = forwardRef(({
                               className, name, autoComplete = "off", focusOnMountDesktop, label, type = "text", validation, password, placeholder = "", onIconClick, disableOnScroll, fixScroll, isArea,

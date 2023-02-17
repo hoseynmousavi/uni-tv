@@ -1,6 +1,6 @@
 import ArrowSvg from "../../media/svg/ArrowSvg"
-import Material from "../../seyed-modules/components/Material"
-import Link from "../../seyed-modules/components/Link"
+import Material from "../../modules/components/Material"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function ArchiveCategoryItem({data: {id, title}})

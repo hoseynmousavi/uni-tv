@@ -1,7 +1,7 @@
 import {createPortal} from "react-dom"
-import goBack from "../../seyed-modules/helpers/goBack"
+import goBack from "../../modules/helpers/goBack"
 import {useEffect, useState} from "react"
-import popOnPopState from "../../seyed-modules/helpers/popOnPopState"
+import popOnPopState from "../../modules/helpers/popOnPopState"
 
 function DesktopModal({children, className, close})
 {

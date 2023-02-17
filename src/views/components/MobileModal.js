@@ -1,10 +1,9 @@
 import {useEffect, useRef} from "react"
 import {createPortal} from "react-dom"
-import popOnPopState from "../../seyed-modules/helpers/popOnPopState"
-import goBack from "../../seyed-modules/helpers/goBack"
-import checkParentClass from "../../seyed-modules/helpers/checkParentClass"
-import onResize from "../../seyed-modules/helpers/onResize"
-import {dontSwitchGesture} from "../../seyed-modules/hooks/SwitchGesture"
+import popOnPopState from "../../modules/helpers/popOnPopState"
+import goBack from "../../modules/helpers/goBack"
+import checkParentClass from "../../modules/helpers/checkParentClass"
+import onResize from "../../modules/helpers/onResize"
 
 function MobileModal({children, className, contentClassName, close, updateHeightTimer})
 {
@@ -188,8 +187,8 @@ function MobileModal({children, className, contentClassName, close, updateHeight
     return (
         createPortal(
             <>
-                <div className={`vertical-panel-back ${dontSwitchGesture}`} ref={sidebarBack} onClick={goBackIfNotHiding}/>
-                <div className={`vertical-panel ${dontSwitchGesture} ${className}`}
+                <div className="vertical-panel-back" ref={sidebarBack} onClick={goBackIfNotHiding}/>
+                <div className={`vertical-panel ${className}`}
                      ref={sidebarRef}
                      onMouseDown={onTouchStart}
                      onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>

@@ -1,7 +1,7 @@
 import CategoryHeader from "../containers/CategoryHeader"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import GetCategories from "../../hooks/GetCategories"
-import MyLoader from "../../seyed-modules/components/MyLoader"
+import MyLoader from "../../modules/components/MyLoader"
 import ArchiveCategoryItem from "../components/ArchiveCategoryItem"
 import {useState} from "react"
 

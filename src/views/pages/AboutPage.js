@@ -1,5 +1,5 @@
 import CategoryHeader from "../containers/CategoryHeader"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import LogoTypeSvg from "../../media/svg/LogoTypeSvg"
 
 function AboutPage()

@@ -1,8 +1,8 @@
 import CategoryHeader from "../containers/CategoryHeader"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
-import ImageShow from "../../seyed-modules/components/ImageShow"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
+import ImageShow from "../../modules/components/ImageShow"
 import videoIcon from "../../media/images/video.svg"
-import Material from "../../seyed-modules/components/Material"
+import Material from "../../modules/components/Material"
 import DownloadSvg from "../../media/svg/DownloadSvg"
 
 function AboutPage()

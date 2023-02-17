@@ -1,6 +1,6 @@
 import {useContext, useRef} from "react"
 import {VideoContext} from "../context/video/VideoReducer"
-import GetData from "../seyed-modules/request/GetData"
+import GetData from "../modules/request/GetData"
 import VideoActions from "../context/video/VideoActions"
 
 function GetVideoItem({id, doAfterGet})

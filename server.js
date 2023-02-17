@@ -47,4 +47,4 @@ app.route("*").get((req, res) =>
     res.sendFile(path.join(__dirname, "/build/index.html"))
 })
 
-app.listen(80, () => console.log(`Server is running in ${process.env.REACT_APP_PORT} ... `))
+app.listen(80, () => console.log(`Server is running...`))

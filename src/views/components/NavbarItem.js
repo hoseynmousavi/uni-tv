@@ -1,6 +1,6 @@
-import Material from "../../seyed-modules/components/Material"
-import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
-import Link from "../../seyed-modules/components/Link"
+import Material from "../../modules/components/Material"
+import createMaterialColor from "../../modules/helpers/createMaterialColor"
+import Link from "../../modules/components/Link"
 
 function NavbarItem({title, Icon, location, link})
 {

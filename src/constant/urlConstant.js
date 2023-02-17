@@ -4,6 +4,7 @@ const urlConstant = {
     archive: "/archive",
     account: "/account",
     about: "/about",
+    privacy: "/privacy",
     sendVideo: "/send-video",
     services: "/services",
     profile: "/profile",

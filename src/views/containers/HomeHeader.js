@@ -1,7 +1,7 @@
 import LogoTypeSvg from "../../media/svg/LogoTypeSvg"
-import Material from "../../seyed-modules/components/Material"
+import Material from "../../modules/components/Material"
 import ProfileSvg from "../../media/svg/ProfileSvg"
-import Link from "../../seyed-modules/components/Link"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function HomeHeader()

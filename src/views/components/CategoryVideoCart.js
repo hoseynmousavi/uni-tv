@@ -1,8 +1,8 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
+import ImageShow from "../../modules/components/ImageShow"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import getVideoTime from "../../helpers/getVideoTime"
-import Material from "../../seyed-modules/components/Material"
-import Link from "../../seyed-modules/components/Link"
+import Material from "../../modules/components/Material"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function CategoryVideoCart({data: {id, mediumUrl, title, time_create, hits}})

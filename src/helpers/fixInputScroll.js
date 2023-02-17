@@ -1,5 +1,5 @@
-import checkOs from "../seyed-modules/helpers/checkOs"
-import getMainRender from "../seyed-modules/helpers/getMainRender"
+import checkOs from "../modules/helpers/checkOs"
+import getMainRender from "../modules/helpers/getMainRender"
 
 function fixInputScroll({inputRef, halfHeight = 40})
 {

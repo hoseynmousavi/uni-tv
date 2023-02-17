@@ -1,7 +1,7 @@
 import {useCallback, useContext, useEffect, useRef, useState} from "react"
 import {VideoContext} from "../context/video/VideoReducer"
 import VideoActions from "../context/video/VideoActions"
-import {REQUEST_CANCEL} from "../seyed-modules/constant/toastTypes"
+import {REQUEST_CANCEL} from "../modules/constant/toastTypes"
 
 function GetVideoList({category})
 {

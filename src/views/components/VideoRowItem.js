@@ -1,6 +1,6 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
-import Material from "../../seyed-modules/components/Material"
-import Link from "../../seyed-modules/components/Link"
+import ImageShow from "../../modules/components/ImageShow"
+import Material from "../../modules/components/Material"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function VideoRowItem({data: {id, mediumUrl, title}})

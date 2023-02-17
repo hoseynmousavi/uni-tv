@@ -21,6 +21,7 @@
 @import "profile";
 @import "services";
 @import "about";
+@import "privacy";
 @import "send-video";
 
 @font-face {
@@ -45,8 +46,4 @@
   font-family: "my-font-en";
   src: url("../media/fonts/yekan-regular.woff2") format("woff2");
   font-display: swap;
-}
-
-.main-tab {
-  position: static;
 }

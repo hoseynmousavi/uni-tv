@@ -1,8 +1,8 @@
 import AccountSettingItem from "./AccountSettingItem"
 import LanguageSvg from "../../media/svg/LanguageSvg"
-import toastManager from "../../seyed-modules/helpers/toastManager"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
-import {INFO_TOAST} from "../../seyed-modules/constant/toastTypes"
+import toastManager from "../../modules/helpers/toastManager"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
+import {INFO_TOAST} from "../../modules/constant/toastTypes"
 
 function AccountLanguage()
 {

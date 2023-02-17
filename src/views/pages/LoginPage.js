@@ -1,18 +1,18 @@
 import LogoSvg from "../../media/svg/LogoSvg"
 import Input from "../components/Input"
-import GetTextConstant from "../../seyed-modules/hooks/GetTextConstant"
-import Link from "../../seyed-modules/components/Link"
-import Material from "../../seyed-modules/components/Material"
+import GetTextConstant from "../../modules/hooks/GetTextConstant"
+import Link from "../../modules/components/Link"
+import Material from "../../modules/components/Material"
 import BtnBottomFullScreen from "../components/BtnBottomFullScreen"
-import Button from "../../seyed-modules/components/Button"
+import Button from "../../modules/components/Button"
 import {useContext, useState} from "react"
-import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
+import createMaterialColor from "../../modules/helpers/createMaterialColor"
 import ArrowSvg from "../../media/svg/ArrowSvg"
-import toastManager from "../../seyed-modules/helpers/toastManager"
-import {FAIL_TOAST, INFO_TOAST} from "../../seyed-modules/constant/toastTypes"
+import toastManager from "../../modules/helpers/toastManager"
+import {FAIL_TOAST, INFO_TOAST} from "../../modules/constant/toastTypes"
 import AuthActions from "../../context/auth/AuthActions"
 import {AuthContext} from "../../context/auth/AuthReducer"
-import parseQueryString from "../../seyed-modules/helpers/parseQueryString"
+import parseQueryString from "../../modules/helpers/parseQueryString"
 import urlConstant from "../../constant/urlConstant"
 import CategoryHeader from "../containers/CategoryHeader"
 
@@ -151,7 +151,7 @@ function LoginPage()
             <div className="login-bottom">
                 <div className="login-privacy">
                     {textConstant.privacyIntro}
-                    <Link>
+                    <Link to={urlConstant.privacy}>
                         <Material className="login-privacy-link">
                             {textConstant.privacyTitle}
                         </Material>

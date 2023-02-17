@@ -1,6 +1,6 @@
-import toastManager from "../seyed-modules/helpers/toastManager"
-import {FAIL_TOAST} from "../seyed-modules/constant/toastTypes"
-import errorConstant from "../seyed-modules/constant/errorConstant"
+import toastManager from "../modules/helpers/toastManager"
+import {FAIL_TOAST} from "../modules/constant/toastTypes"
+import errorConstant from "../modules/constant/errorConstant"
 
 function errorManager({error})
 {

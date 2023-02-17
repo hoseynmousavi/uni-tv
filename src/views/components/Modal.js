@@ -1,5 +1,5 @@
 import {useEffect} from "react"
-import popOnPopState from "../../seyed-modules/helpers/popOnPopState"
+import popOnPopState from "../../modules/helpers/popOnPopState"
 import IsMobile from "../../hooks/IsMobile"
 import MobileModal from "./MobileModal"
 import DesktopModal from "./DesktopModal"
