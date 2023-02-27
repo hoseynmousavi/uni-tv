@@ -24,6 +24,7 @@ const faTextConstant = {
     notFound: "موردی یافت نشد",
     editAccount: "ویرایش پروفایل",
     setting: "تنظیمات",
+    quickAccess: "دسترسی سریع",
     darkMode: "حالت شب",
     chooseLanguage: "انتخاب زبان",
     sendVideoTitle: "ارسال ویدئو",

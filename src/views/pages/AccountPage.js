@@ -7,7 +7,6 @@ import GetTextConstant from "../../modules/hooks/GetTextConstant"
 import createMaterialColor from "../../modules/helpers/createMaterialColor"
 import AccountSettingItem from "../components/AccountSettingItem"
 import AboutSvg from "../../media/svg/AboutSvg"
-import Button from "../../modules/components/Button"
 import urlConstant from "../../constant/urlConstant"
 import AccountLogout from "../components/AccountLogout"
 import AccountLanguage from "../components/AccountLanguage"
@@ -26,7 +25,7 @@ function AccountPage()
 
     return (
         <div className="account">
-            <CategoryHeader data={{title: textConstant.profile}}/>
+            <CategoryHeader data={{title: textConstant.setting}}/>
             <div className="account-detail">
                 {
                     user ?
@@ -43,14 +42,14 @@ function AccountPage()
                         :
                         <>
                             <AccountSvg className="account-detail-login-img"/>
-                            <Link className="account-detail-login-btn" to={urlConstant.login}>
-                                <Button className="account-detail-login-btn-inner" type="second">{textConstant.loginRegister}</Button>
-                            </Link>
+                            {/*<Link className="account-detail-login-btn" to={urlConstant.login}>*/}
+                            {/*    <Button className="account-detail-login-btn-inner" type="second">{textConstant.loginRegister}</Button>*/}
+                            {/*</Link>*/}
                         </>
                 }
             </div>
             <div className="account-setting">
-                <div className="account-setting-title">{textConstant.setting}</div>
+                <div className="account-setting-title">{textConstant.quickAccess}</div>
                 <AccountDisplay/>
                 <AccountLanguage/>
                 <AccountSettingItem link={urlConstant.sendVideo} Icon={DownloadSvg} title={textConstant.sendVideo}/>
