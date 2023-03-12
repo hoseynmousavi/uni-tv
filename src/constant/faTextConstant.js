@@ -48,7 +48,7 @@ const faTextConstant = {
     service1: "سامانه گلستان",
     service2: "رزرو غذا",
     service3: "اتوماسیون",
-    service4: "دانلود رایگان",
+    service4: "دانلود رایگان SAGE",
     service5: "کلاس مجازی",
     service6: "ارتقا و ترفیع اساتید",
     service7: "ایمیل",
