@@ -21,7 +21,7 @@ function Navbar()
         <nav className={`navbar ${hide ? "hide" : ""}`}>
             {/*<div className="navbar-download">*/}
             {/*    <div>*/}
-            {/*        <div>اپلیکیشن شبکه دانشگاه تهران</div>*/}
+            {/*        <div>{process.env.REACT}</div>*/}
             {/*    </div>*/}
             {/*</div>*/}
             <div className="navbar-main">

@@ -7,6 +7,7 @@ import service4 from "../../media/images/service4.png"
 import service5 from "../../media/images/service5.png"
 import service6 from "../../media/images/service6.png"
 import service7 from "../../media/images/service7.png"
+import service8 from "../../media/images/service8.png"
 import GetTextConstant from "../../modules/hooks/GetTextConstant"
 
 function ServicesPage()
@@ -25,6 +26,7 @@ function ServicesPage()
                     <AccountToolsItem title={textConstant.service5} img={service5} href={process.env.REACT_APP_SERVICE5_LINK}/>
                     <AccountToolsItem title={textConstant.service6} img={service6} href={process.env.REACT_APP_SERVICE6_LINK}/>
                     <AccountToolsItem title={textConstant.service7} img={service7} href={process.env.REACT_APP_SERVICE7_LINK}/>
+                    <AccountToolsItem title={textConstant.service8} img={service8} href={process.env.REACT_APP_SERVICE8_LINK}/>
                 </div>
             </div>
         </>
