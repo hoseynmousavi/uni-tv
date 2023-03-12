@@ -2,7 +2,7 @@ import LogoTypeSvg from "../../media/svg/LogoTypeSvg"
 import Material from "../../modules/components/Material"
 import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
-import SettingSvg from "../../media/svg/SettingSvg"
+import ProfileSvg from "../../media/svg/ProfileSvg"
 
 function HomeHeader()
 {
@@ -13,7 +13,7 @@ function HomeHeader()
             </div>
             <Link to={urlConstant.account}>
                 <Material className="home-header-profile">
-                    <SettingSvg className="home-header-profile-icon"/>
+                    <ProfileSvg className="home-header-profile-icon"/>
                 </Material>
             </Link>
         </header>

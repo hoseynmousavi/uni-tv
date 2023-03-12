@@ -2,7 +2,7 @@ const urlConstant = {
     home: "/",
     login: "/login",
     archive: "/archive",
-    account: "/setting",
+    account: "/account",
     about: "/about",
     privacy: "/privacy",
     sendVideo: "/send-video",

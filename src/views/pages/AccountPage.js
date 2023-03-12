@@ -15,6 +15,7 @@ import AccountSvg from "../../media/svg/AccountSvg"
 import CategoryHeader from "../containers/CategoryHeader"
 import DownloadSvg from "../../media/svg/DownloadSvg"
 import getUserFixName from "../../helpers/getUserFixName"
+import Button from "../../modules/components/Button"
 
 function AccountPage()
 {
@@ -25,7 +26,7 @@ function AccountPage()
 
     return (
         <div className="account">
-            <CategoryHeader data={{title: textConstant.setting}}/>
+            <CategoryHeader data={{title: textConstant.profile}}/>
             <div className="account-detail">
                 {
                     user ?
@@ -42,9 +43,9 @@ function AccountPage()
                         :
                         <>
                             <AccountSvg className="account-detail-login-img"/>
-                            {/*<Link className="account-detail-login-btn" to={urlConstant.login}>*/}
-                            {/*    <Button className="account-detail-login-btn-inner" type="second">{textConstant.loginRegister}</Button>*/}
-                            {/*</Link>*/}
+                            <Link className="account-detail-login-btn" to={urlConstant.login}>
+                                <Button className="account-detail-login-btn-inner" type="second">{textConstant.loginRegister}</Button>
+                            </Link>
                         </>
                 }
             </div>
