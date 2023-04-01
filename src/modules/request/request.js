@@ -85,10 +85,9 @@ function get({base, url, param = "", dontToast, dontCache, cancel, useRefreshTok
     }
 }
 
-function post({base, url, data, param = "", progress, cancel, dontToast, useRefreshToken, headers, dontCache = true})
+function post({base, url, data, param = "", progress, cancel, dontToast, headers, dontCache = true})
 {
     const reqUrl = urlMaker({makeBaseOnEnv, base, url, param})
-    const token = localStorage.getItem(useRefreshToken ? "refreshToken" : "token")
     let source
     if (cancel)
     {
@@ -100,7 +99,7 @@ function post({base, url, data, param = "", progress, cancel, dontToast, useRefr
         reqUrl,
         data,
         {
-            headers: (token || headers) && {...(token ? {[useRefreshToken ? "refresh-token" : "Authorization"]: token} : {}), ...(headers ? headers : {})},
+            headers: {...(headers ? headers : {})},
             cancelToken: source?.token,
             onUploadProgress: p => progress && progress(Math.floor((p.loaded * 99) / p.total)),
         },
